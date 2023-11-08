@@ -1,0 +1,47 @@
+
+//Sinencio Granados Dante Jusepee
+
+/**
+ * Clase para hacer operaciones con numeros
+ * -M determina el valor mayor
+ * -m determina el valor menor
+ * -p calcula el promedio de los valores
+ * -o ordena y muestra los valores en orden decreciente
+ * -t realiza las 4 operaciones anteriores
+ * @param - -M, -m, -p, -o, -t que son las operaciones realizables
+ */
+
+public class Numeros{
+  
+  public static void main(String [] pps){
+    if (args.length > 1) { 
+      int [] prueba = new int[args.length-1];
+      for (int i = 1; i< args.length ;i++) {
+        prueba[i-1] = Integer.parseInt(args[i]);
+      }
+    }
+
+      if (args[0].indexOf('t') > 0) {
+        args[0] = "Mmpo";
+      }
+      
+      if (args[0].indexOf('M') > 0){
+        
+      }
+      
+      if (args[0].indexOf('m') > 0){
+        
+      }
+      
+      if (args[0].indexOf('p') > 0){
+        
+      }
+      
+      if (args[0].indexOf('o') > 0)
+
+      } else {
+      System.out.println("Ingresa datos para calcular");
+    }
+  }
+  
+}

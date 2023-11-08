@@ -1,0 +1,25 @@
+public class Ayudante extends Academico{
+  private double promedio;
+  
+  public Ayudante(String noTr, double sueldo, String grado){
+    super(noTr, sueldo, grado);
+    this.promedio = promedio;
+  }
+  
+  public void asignarMateria(Materia m){
+    if(super.materia1 != null){
+      super.materia2 = m;
+    }else{
+      super.materia1 = m;
+    }
+  }
+  
+  public void pedirAyudantia(Profesor p){
+    p.candidato(this);
+  }
+  
+  public String toString(){
+    String s = super.toString() + ", " + promedio;
+      return s;
+  }
+}

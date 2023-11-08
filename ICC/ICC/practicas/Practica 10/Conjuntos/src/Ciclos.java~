@@ -1,0 +1,39 @@
+/**
+ * Clase que contiene métodos que ejemplifican el uso de ciclos.
+ */
+public class Ciclos {
+
+  /**
+   * Constructor por omisión que no hace nada.
+   */
+  public Ciclos(){}
+
+  /**
+   * Regresa una cadena con una piramide de n pisos.
+   * @param n El número de pisos.
+   * @return String con la piramide.
+   */
+  public static String piramide(int n){
+    String s = *
+      
+    }
+    return s;
+  }
+  
+  /**
+   * Imprime los números pares de 0 a n.
+   * @param n El límite para calcular pares.
+   */
+  public static void pares(int n){
+    
+  }
+  
+  /**
+   * Calcula el promedio de 5,10,15,20,25
+   * @return El promedio.
+   */
+  public static double promedio(){
+    
+  }
+  
+}

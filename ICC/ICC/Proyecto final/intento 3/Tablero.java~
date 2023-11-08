@@ -1,0 +1,7 @@
+public class Tablero{
+  
+  public Tablero(int fila, int columna){
+    
+  }
+  
+}

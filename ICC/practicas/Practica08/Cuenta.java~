@@ -1,0 +1,61 @@
+/**
+ * Clase para manejar cuentas de debito
+ * @author Sinencio Granados Dante Jusepee
+ * @version #1
+ */
+public class Cuenta {
+  
+    //Atributos
+  private long numCuenta;
+  private double saldo;
+
+    /** Crea una cuenta con disponible mínimo de $2500
+      * 
+      */
+    Cuenta(long nCta, double disponibleInicial) {
+      if(disponibleInicial > 2500){
+        saldo = disponibleInicial;
+        numCuenta = nCta;
+      } else {
+          System.out.println("No se puede crear la cuenta " + nCta + " con tan poco dinero, el minimo para crearla es de 2.500");
+        }
+    }
+
+
+    // Retira una cantidad de dinero en la cuenta 
+    public void retirar(double monto) { 
+      if(monto < 0){
+        System.out.println("No se pueden retirar cantidades negativas");
+      } else{
+      if (monto > saldo){
+        System.out.println("No hay suficiente dinero para retirar esa cantidad");
+      } else{
+        saldo = saldo - monto;
+      }
+        }
+    }
+
+    // Deposita una cantidad de dinero en la cuenta 
+    public void depositar(double monto) {
+      if (monto > 0){
+        saldo += monto;
+      } else{
+        System.out.println("No se puede depositar dinero negativo");
+      }
+    }
+    // Devuelve el disponible de la cuenta
+    public double obtenerDisponible() {
+      return saldo;
+  }
+
+    // Devuelve el número de identificación de la cuenta bancaria
+    public long obtenerNumCuenta() {
+      return numCuenta;
+    } 
+    
+    // Devuelve una cadena
+    public String toString(){
+      return "Tu saldo es " + saldo + " y tu numero de cuenta es " + numCuenta;
+    }
+}
+

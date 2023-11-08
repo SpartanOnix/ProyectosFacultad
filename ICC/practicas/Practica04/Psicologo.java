@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Psicologo {
+	public static void main(String[] args) {
+		Scanner lector = new Scanner(System.in);
+		System.out.println("Bienvenido ¿Cuál es su nombre?");
+		//Escribe tu programa aquí.
+		
+		String nombre;
+		 
+		nombre = lector.nextLine();
+		System.out.println("Buenas Tardes, " + nombre);
+
+		
+		System.out.println("Digame, ¿Cual es su Problema?");
+		
+
+		String problema = lector.nextLine();
+		System.out.println("MMM... Ya veo\n Y digame...\n ¿Por que dice: " + problema + "?");
+
+		String respuesta = lector.nextLine();
+		System.out.println("Muy interesante, hablaremos de ello con mas detalles en la siguiente sesion");
+
+		
+	}
+}

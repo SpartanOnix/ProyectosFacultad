@@ -1,0 +1,11 @@
+Sinencio Granados Dante Jusepee               Numero de Cuenta:316246019
+
+El proyecto contiene 3 archivos, el tablero (clase padre), el cuerpo (clase hija)
+y la clase buscaminas (la clase principal), el buscaminas se ejecuta desde el
+archivo buscaminas y dentro de el para guardar un tablero con la serializacion
+se guarda en un archivo llamado "save.txt", para compilarlo solo se debe ver que
+los 3 archivos esten en una misma carpeta, en si al tener la limitante de no
+poder tener una interfaz grafica modifique el juego para que el objetivo sea
+encontrar las minas en la menor cantidad de turnos posibles ya que es mas facil
+buscar las bombas que recordar donde estan, el programa es robusto asi que en
+teoria no deberia de pararse o morir sin que se lo pidan.

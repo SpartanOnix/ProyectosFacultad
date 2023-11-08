@@ -1,0 +1,37 @@
+Interfaz para dibujar figuras geométricas.
+Autor: Miguel Angel Mendoza Ponce.
+
+Para esta interfaz se utilizó la biblioteca Processing de java, se puede 
+encontrar toda la documentación de esta biblioteca en https://processing.org/reference/ .
+
+
+Para compilar y ejecutar se usa el programa ant, es una biblioteca que tiene como misión construir proyectos
+en java a través de un archivo build.xml donde se ejecutan las instrucciones y compilan las clases
+que se usan en el proyecto. Para más información, visite: http://ant.apache.org/
+
+INSTALANDO ANT
+
+En sistemas basados en Linux, como Fedora, debian y Ubuntu se puede instalar usando el
+siguiente comando en una terminal: sudo apt-get install ant o sudo yum install ant
+
+Para instalar ant en sistemas Windows, seguir el siguiente tutorial: https://www.mkyong.com/ant/how-to-install-apache-ant-on-windows/
+
+COMPILANDO Y EJECUTANDO
+
+Para ejecutar y compilar basta con posicionarse en el directorio donde se encuentra el archivo build.xml (incluido en la carpeta Triangulo de 
+este proyecto). 
+
+Ejemplo Linux ubuntu:
+> cd /home/usuario/Documentos/Triangulo/
+> ant
+
+Ejemplo Windows:
+C:\ cd C:\user\Documents and Settings\Geometria\
+C:\user\Documents and Settings\Triangulo\> ant
+
+Sientanse libres de modificar el programa a su gusto.
+
+
+
+
+

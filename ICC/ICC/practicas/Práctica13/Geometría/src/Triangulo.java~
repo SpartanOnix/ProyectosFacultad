@@ -1,0 +1,241 @@
+/**
+ * Clase para crear triángulos en un plano cartesiano.
+ * @author Miguel Mendoza.
+ */
+public class Triangulo extends Figura implements FiguraI{
+ 
+ /**
+  * Constructor por omisión.
+  * Construye un triángulo en los puntos (0,0),(5,0),(2.5,2.5).
+  */
+ public Triangulo(){
+  super.lineas = new Linea[3];
+  lineas[0].getP1().asignarX(0); 
+  lineas[0].getP1().asignarY(0);
+  lineas[1].getP1().asignarX(5);
+  lineas[1].getP1().asignarY(0);
+  lineas[2].getP1().asignarX(2.5);
+  lineas[2].getP1().asignarY(2.5);
+  
+ }
+
+ /**
+  * Construye un triángulo dados 3 puntos del plano.
+  * @param p1 El punto 1
+  * @param p2 El punto 2
+  * @param p3 El punto 3
+  * @throws PuntosInvalidosExcepcion si los puntos son iguales.
+  */
+ public Triangulo(Punto p1, Punto p2, Punto p3) throws PuntosInvalidosExcepcion{
+   super.lineas = new Linea[3];
+//   throw new PuntosInvalidosExcepcion("Mete un valor valido para el triangulo");
+   lineas[0].getP1().asignarX(p1.obtenerX()); 
+   lineas[0].getP1().asignarY(p1.obtenerY());
+   lineas[1].getP1().asignarX(p2.obtenerX());
+   lineas[1].getP1().asignarY(p2.obtenerY());
+   lineas[2].getP1().asignarX(p3.obtenerX());
+   lineas[2].getP1().asignarY(p3.obtenerY());
+   
+  
+ }
+
+ /**
+  * Constructor copia. Construye un triángulo a partir de otro.
+  * @param t El triángulo del cual se creará uno nuevo.
+  * @throws NullPointerException si la figura es null.
+  */
+ public Triangulo(Triangulo t) throws NullPointerException{
+   super.lineas = new Linea[3];
+   lineas[0].getP1().asignarX(t.getL1().getP1().obtenerX()); 
+   lineas[0].getP1().asignarY(t.getL1().getP1().obtenerY());
+   lineas[1].getP1().asignarX(t.getL2().getP1().obtenerX());
+   lineas[1].getP1().asignarY(t.getL2().getP1().obtenerY());
+   lineas[2].getP1().asignarX(t.getL3().getP1().obtenerX());
+   lineas[2].getP1().asignarY(t.getL3().getP1().obtenerY());
+  
+ }
+
+ /**
+  * Obtiene el perímetro del triángulo.
+  * @return El perímetro. 
+  */
+ public double getPerimetro(){
+   double a = lineas[0].getP1().distancia(lineas[0].getP2());
+   double b = lineas[1].getP1().distancia(lineas[1].getP2());
+   double c = lineas[2].getP1().distancia(lineas[2].getP2());
+   double perim = a + b + c;
+   return perim;
+  
+ }
+
+ //Aquí va Método getArea()
+  public double getArea(){
+   double a = lineas[0].getP1().distancia(lineas[0].getP2());
+   double b = lineas[1].getP1().distancia(lineas[1].getP2());
+   double c = lineas[2].getP1().distancia(lineas[2].getP2());
+   double area = Math.sqrt((((a+b+c)/(2))*(((a+b+c)/(2))-a)*(((a+b+c)/(2))-b)*(((a+b+c)/(2))-c)));
+   return area;
+  
+  }
+
+ /**
+  * Mueve el triángulo en el plano.
+  * @param deltaX El desplazamiento en el eje X.
+  * @param deltaY El desplazamiento en el eje Y.
+  * @throws DesplazamientoInvalido si los deltas son cero.
+  */
+ @Override
+ public void mover(double deltaX, double deltaY){
+      double x1 = lineas[0].getP1().obtenerX();
+   double y1 = lineas[0].getP1().obtenerY();
+   double x2 = lineas[0].getP2().obtenerX();
+   double y2 = lineas[0].getP2().obtenerY();
+   double x3 = lineas[1].getP2().obtenerX();
+   double y3 = lineas[1].getP2().obtenerY();
+    
+   double x1r = deltaX;
+   double y1r = deltaY;
+   double x2r = deltaX;
+   double y2r = deltaY;
+   double x3r = deltaX;
+   double y3r = deltaY;
+     
+    lineas[0].getP1().asignarX(x1r);
+    lineas[0].getP1().asignarY(y1r);
+    lineas[0].getP2().asignarX(x2r);
+    lineas[0].getP2().asignarY(y2r);
+
+    lineas[1].getP1().asignarX(x1r);
+    lineas[1].getP1().asignarY(y1r);
+    lineas[1].getP2().asignarX(x3r);
+    lineas[1].getP2().asignarY(y3r);
+    
+    lineas[2].getP1().asignarX(x2r);
+    lineas[2].getP1().asignarY(y2r);
+    lineas[2].getP2().asignarX(x3r);
+    lineas[2].getP2().asignarY(y3r);
+  
+ }
+
+ //Aquí va Método rotar90()
+  @Override
+  public void rotar90(){
+    double x1 = lineas[0].getP1().obtenerX();
+    double y1 = lineas[0].getP1().obtenerY();
+    double x2 = lineas[0].getP2().obtenerX();
+    double y2 = lineas[0].getP2().obtenerY();
+    double x3 = lineas[1].getP2().obtenerX();
+    double y3 = lineas[1].getP2().obtenerY();
+    
+    double x1r = x1 * (-1);
+    double y1r = y1 * (1);
+    double x2r = x2 * (-1);
+    double y2r = y2 * (1);
+    double x3r = x3 * (-1);
+    double y3r = y3 * (1);
+     
+    lineas[0].getP1().asignarX(x1r);
+    lineas[0].getP1().asignarY(y1r);
+    lineas[0].getP2().asignarX(x2r);
+    lineas[0].getP2().asignarY(y2r);
+
+    lineas[1].getP1().asignarX(x1r);
+    lineas[1].getP1().asignarY(y1r);
+    lineas[1].getP2().asignarX(x3r);
+    lineas[1].getP2().asignarY(y3r);
+    
+    lineas[2].getP1().asignarX(x2r);
+    lineas[2].getP1().asignarY(y2r);
+    lineas[2].getP2().asignarX(x3r);
+    lineas[2].getP2().asignarY(y3r);
+  
+  }
+
+ 
+ /**
+  * Rota el triángulo 180°.
+  */
+ @Override
+ public void rotar180(){
+   double x1 = lineas[0].getP1().obtenerX();
+   double y1 = lineas[0].getP1().obtenerY();
+   double x2 = lineas[0].getP2().obtenerX();
+   double y2 = lineas[0].getP2().obtenerY();
+   double x3 = lineas[1].getP2().obtenerX();
+   double y3 = lineas[1].getP2().obtenerY();
+    
+   double x1r = x1 * (-1);
+   double y1r = y1 * (-1);
+   double x2r = x2 * (-1);
+   double y2r = y2 * (-1);
+   double x3r = x3 * (-1);
+   double y3r = y3 * (-1);
+     
+    lineas[0].getP1().asignarX(x1r);
+    lineas[0].getP1().asignarY(y1r);
+    lineas[0].getP2().asignarX(x2r);
+    lineas[0].getP2().asignarY(y2r);
+
+    lineas[1].getP1().asignarX(x1r);
+    lineas[1].getP1().asignarY(y1r);
+    lineas[1].getP2().asignarX(x3r);
+    lineas[1].getP2().asignarY(y3r);
+    
+    lineas[2].getP1().asignarX(x2r);
+    lineas[2].getP1().asignarY(y2r);
+    lineas[2].getP2().asignarX(x3r);
+    lineas[2].getP2().asignarY(y3r);
+  
+ }
+
+ /**
+  * Nos dice si este triángulo es igual a otro.
+  * @param f La FiguraI a comparar.
+  * @return true si son iguales.
+  */
+ public boolean equals(FiguraI f){
+   Triangulo m =  (Triangulo)f;
+   if(this.getLineas() == m.getLineas()){
+     return true;
+   }else{
+     return false;
+   }
+ }
+
+ /**
+  * Devuelve la linea 1.
+  * @return Linea 1 
+  */
+ public Linea getL1(){
+   Linea d = this.lineas[0];
+   return d;
+ }
+
+ /**
+  * Devuelve la linea .
+  * @return Linea 2 
+  */
+ public Linea getL2(){
+   return lineas[1];
+ }
+
+ /**
+  * Devuelve la linea 3.
+  * @return Linea 3. 
+  */
+ public Linea getL3(){
+   return lineas[2];
+ }
+
+ /**
+  * Regresa los datos del triángulo.
+  */
+ @Override
+ public String toString(){
+   Triangulo t2 = new Triangulo();
+    return "Area: " + t2.getArea() + "\nPerimetro: " + t2.getPerimetro() + "\nCoordenadas: \n P1: " + t2.getL1().getP1() + "\n P2: " +  t2.getL2().getP1() + "\n P3: " + t2.getL3().getP1();
+  
+ }
+
+
+}

@@ -1,0 +1,34 @@
+/*
+     * Metodo auxiliar para mostrar el menu de opciones
+     * NO MODIFICARLO
+     */
+    private int menu(){
+        Scanner in = new Scanner(System.in);
+
+        int opcion = 0;
+        boolean validacion = true;
+
+        System.out.println("\nContestadora");
+        System.out.println("1. Agregar mensaje");
+        System.out.println("2. Revisar mensajes");
+        System.out.println("3. Salir");
+        System.out.print("Seleccionar una opcion  --> ");
+
+ do{
+     opcion = 0;
+            validacion = true;
+            try{
+                opcion = in.nextInt();
+            }catch(Exception e){
+                validacion = false;
+            }
+            if(opcion < 1 || opcion > 3){
+                validacion = false;
+                System.out.println("\nOpcion invalida.\nIntroduzca 1, 2 o 3.\n\n");
+            }
+ }while(!validacion);
+
+        return opcion;
+    }
+
+    
