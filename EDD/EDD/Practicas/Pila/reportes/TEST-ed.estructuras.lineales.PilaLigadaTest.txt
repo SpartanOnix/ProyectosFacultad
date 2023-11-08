@@ -1,0 +1,144 @@
+Testsuite: ed.estructuras.lineales.PilaLigadaTest
+Tests run: 54, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 sec
+------------- Standard Output ---------------
+(PilaA)empujaSize: Tests the stack has correct size and is not empty after empuja.
+[1.0/1.0]	Passed.
+(PilaA)expulsaMira: Tests the expulsa and mira methods return the same element.
+[1.0/1.0]	Passed.
+(PilaA)expulsaEmpty: Tests the expulsa method returns null when empty.
+[1.0/1.0]	Passed.
+(PilaA)expulsaContains: Tests the stack do not contains any expulsa element.
+[1.0/1.0]	Passed.
+(PilaA)empujaContains: Tests the stack contains empuja elements.
+[1.0/1.0]	Passed.
+(PilaA)expulsaSize: Tests the stack size after expulsa and empty when all elements are removed.
+[1.0/1.0]	Passed.
+(PilaA)LIFO: Tests the stack is LIFO .
+[1.0/1.0]	Passed.
+(CA)equalsItself: Tests the equality between a collection with itself.
+[1.0/1.0]	Passed.
+(CA)genericArray: Tests a NullPointerException is thrown if the array parameter is null.
+[1.0/1.0]	Passed.
+(CA)iteratorContains: Tests the elements retrieved by the iterator are equal to the ones inserted (not necessarily same order).
+[1.0/1.0]	Passed.
+(CA)equalsNull: Tests the inequality between a collection with null.
+[1.0/1.0]	Passed.
+(CA)objectArrayContains: Tests the collection elements in the array are have same order as iterator.
+[1.0/1.0]	Passed.
+(CA)genericArrayZeroSize: Tests the number of elements in the array are the same as collection when parameter size is lower.
+[1.0/1.0]	Passed.
+(CA)containsAllItself: Tests the containAll method with itself.
+[1.0/1.0]	Passed.
+(CA)isEmpty: Tests the collection is empty at initialization.
+[1.0/1.0]	Passed.
+(CA)initSize: Tests the collection has zero size at initialization.
+[1.0/1.0]	Passed.
+(CA)genericArrayNullFill: Tests the elements in the array with index higher than collection size are null.
+[1.0/1.0]	Passed.
+(CA)addAllNullPointer: Tests a NullPointerException is thrown if the parameter is null.
+[1.0/1.0]	Passed.
+(CA)removeUnsupported: Tests a UnsupportedOperationException is thrown if remove(Object) is called.
+[1.0/1.0]	Passed.
+(CA)containsAllInit: Tests the containAll with two empty collections.
+[1.0/1.0]	Passed.
+(CA)objectArrayEmpty: Tests the number of elements is zero in the array when empty.
+[1.0/1.0]	Passed.
+(CA)containsAll: Tests the containAll with two non empty equal collections.
+[1.0/1.0]	Passed.
+(CA)addAllIllegalArgument: Tests an IllegalArgumentException is thrown if the parameter is itself.
+[1.0/1.0]	Passed.
+(CA)genericArraySize: Tests the collection number of elements in the array are the same as iterator.
+[1.0/1.0]	Passed.
+(CA)clearInit: Tests a cleared collection is equal to new collection.
+[1.0/1.0]	Passed.
+(CA)genericArrayEmpty: Tests the collection number of elements is zero in the array when empty.
+[1.0/1.0]	Passed.
+(CA)iteratorInit: Tests the collection iterator has no elements initialization.
+[1.0/1.0]	Passed.
+(CA)addSize: Tests the collection has correct size and is not empty after add.
+[1.0/1.0]	Passed.
+(CA)addContains: Tests the collection contains elements added elements.
+[1.0/1.0]	Passed.
+(CA)removeAllUnsupported: Tests a UnsupportedOperationException is thrown if removeAll(Collection<?>) is called.
+[1.0/1.0]	Passed.
+(CA)clearSize: Tests the collection is empty and zero size after clear for a non empty non zero size collection.
+[1.0/1.0]	Passed.
+(CA)equals: Tests the equality between two equal collections (same order, size and elements).
+[1.0/1.0]	Passed.
+(CA)iteratorSize: Tests the number of elements retrieved by the iterator are equal to the ones inserted.
+[1.0/1.0]	Passed.
+(CA)equalsObject: Tests the inequality between a collection with an non collection object.
+[1.0/1.0]	Passed.
+(CA)clearContains: Tests the collection do not contains any cleared element.
+[1.0/1.0]	Passed.
+(CA)addAllContains: Tests the collection contains all added elements after addAll.
+[1.0/1.0]	Passed.
+(CA)addAllSize: Tests the collection has correct size and is not empty after addAll.
+[1.0/1.0]	Passed.
+(CA)genericArrayContains: Tests the elements in the array are have same order as iterator.
+[1.0/1.0]	Passed.
+(CA)containsAllButOne: Tests the containAll method with a collection which contains all but one element in the original collection.
+[1.0/1.0]	Passed.
+(CA)retainAllUnsupported: Tests a UnsupportedOperationException is thrown if retainAll(Collection<?>) is called.
+[1.0/1.0]	Passed.
+(CA)objectArraySize: Tests the number of elements in the array are the same as iterator.
+[1.0/1.0]	Passed.
+==============================
+Test: 41/41    Points: 41.0/41.0  -->  10.0
+==============================
+------------- ---------------- ---------------
+
+Testcase: empujaSizeTest took 0.004 sec
+Testcase: expulsaMiraTest took 0 sec
+Testcase: expulsaEmptyTest took 0 sec
+Testcase: expulsaContainsTest took 0.001 sec
+Testcase: empujaContainsTest took 0 sec
+Testcase: expulsaSizeTest took 0.001 sec
+Testcase: LIFOTest took 0.001 sec
+Testcase: equalsItselfTest took 0.001 sec
+Testcase: toGenericArrayNullPTest took 0.001 sec
+Testcase: removeAllEmptyTest took 0.001 sec
+Testcase: iteratorContainsTest took 0.001 sec
+Testcase: equalsNullTest took 0 sec
+Testcase: removeAllItselfTest took 0 sec
+Testcase: toObjectArrayContainsTest took 0.001 sec
+Testcase: toGenericArrayZeroSizeTest took 0 sec
+Testcase: containsAllItselfTest took 0 sec
+Testcase: emptyTest took 0 sec
+Testcase: zeroSizeTest took 0 sec
+Testcase: retainAllEmptyTest took 0 sec
+Testcase: removeAllSizeTest took 0 sec
+Testcase: toGenericArrayNullFillTest took 0.001 sec
+Testcase: addAllNullPointerTest took 0 sec
+Testcase: retainAllNullPointerTest took 0.001 sec
+Testcase: removeUnsupportedTest took 0 sec
+Testcase: containsAllInitTest took 0.001 sec
+Testcase: toObjectArrayEmptyTest took 0 sec
+Testcase: retainAllItselfTest took 0.001 sec
+Testcase: containsAllTest took 0 sec
+Testcase: addAllIllegalArgumentTest took 0 sec
+Testcase: removeSizeTest took 0 sec
+Testcase: toGenericArraySizeTest took 0 sec
+Testcase: clearInitTest took 0 sec
+Testcase: retainAllContainsTest took 0 sec
+Testcase: toGenericArrayEmptyTest took 0 sec
+Testcase: iteratorInitTest took 0.001 sec
+Testcase: addSizeTest took 0 sec
+Testcase: addContainsTest took 0.001 sec
+Testcase: removeAllUnsupportedTest took 0 sec
+Testcase: clearSizeTest took 0.001 sec
+Testcase: equalsTest took 0 sec
+Testcase: iteratorSizeTest took 0.001 sec
+Testcase: equalsObjectTest took 0 sec
+Testcase: removeContainsTest took 0 sec
+Testcase: clearContainsTest took 0 sec
+Testcase: removeEmptyTest took 0 sec
+Testcase: removeAllContainsTest took 0 sec
+Testcase: removeAllNullPointerTest took 0 sec
+Testcase: retainAllDontContainsTest took 0 sec
+Testcase: addAllContainsTest took 0 sec
+Testcase: addAllSizeTest took 0 sec
+Testcase: toGenericArrayContainsTest took 0 sec
+Testcase: containsAllButOneTest took 0 sec
+Testcase: retainAllUnsupportedTest took 0 sec
+Testcase: toObjectArraySizeTest took 0 sec

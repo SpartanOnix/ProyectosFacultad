@@ -1,0 +1,16 @@
+Testsuite: ed.estructuras.lineales.ArregloTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec
+------------- Standard Output ---------------
+2-dimensiones
+Obtener índice en almacenarElemento - excepción
+Obtener índice en obtenerElemento - excepción
+3-dimensiones
+==============================
+Calificacion automatica: 10.0
+==============================
+------------- ---------------- ---------------
+
+Testcase: testBidimensional took 0.002 sec
+Testcase: testThrow1 took 0.001 sec
+Testcase: testThrow2 took 0 sec
+Testcase: testTridimensional took 0 sec

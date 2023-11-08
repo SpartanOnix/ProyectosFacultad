@@ -1,0 +1,33 @@
+package ed.complejidad;
+
+public class UsoComplejidad{
+  
+  public static void main(String [] pps){
+    Complejidad c = new Complejidad();
+    
+    try{
+      for(int n=0; n<10; n++){
+        int f = c.fibonacciIt(n);
+        System.out.print(f + ", ");
+        Complejidad.escribeOperaciones("FibonacciIt.dat", n, c.leeContador());       
+      }
+        
+      for(int n=0; n<10; n++){
+        int g = c.fibonacciRec(n);
+        System.out.print(g + ", ");
+        Complejidad.escribeOperaciones("FibonacciRec.dat", n, c.leeContador());      
+      }   
+    
+      for(int n=1; n<10; n++){
+        int h = c.tPascalRec(n, n);
+        Complejidad.escribeOperaciones("tPascalRec.dat", n, n, c.leeContador());      
+      }
+      
+      for(int n=0; n<10; n++){
+        int h = c.tPascalIt(n, n);
+        Complejidad.escribeOperaciones("tPascalIt.dat", n, n, c.leeContador());
+      }
+      
+    }catch(Exception e){}
+  }
+}

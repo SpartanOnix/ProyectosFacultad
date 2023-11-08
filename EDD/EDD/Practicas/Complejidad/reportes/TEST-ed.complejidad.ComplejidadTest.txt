@@ -1,0 +1,24 @@
+Testsuite: ed.complejidad.ComplejidadTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 sec
+------------- Standard Output ---------------
+fibonacciRec
+fibonacciIt
+CÃ¡lculo fibonacci valor invalido
+tPascalIt
+tPascalRec
+CÃ¡lculo fibonacci valor invalido2
+CÃ¡lculo pascal valor invalido2
+CÃ¡lculo pascal valor invalido
+==============================
+Calificacion automatica: 10.0
+==============================
+------------- ---------------- ---------------
+
+Testcase: testFibonacciRec took 0.002 sec
+Testcase: testFibonacciIt took 0 sec
+Testcase: testFibItInvalido took 0.001 sec
+Testcase: testTPascalIt took 0 sec
+Testcase: testTPascalRec took 0.001 sec
+Testcase: testFibRecInvalido took 0 sec
+Testcase: testPascalRecInvalido took 0 sec
+Testcase: testPascalInvalido took 0.001 sec
