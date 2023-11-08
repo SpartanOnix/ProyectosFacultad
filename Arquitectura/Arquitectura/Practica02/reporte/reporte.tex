@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{forest}
+
+\title{Practica 02}
+\author{Dante Jusepee Sinencio Granados}
+\affil{Facultad de ciencias, UNAM}
+\date{March 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+En esta practica utilizamos tablas de verdad para ver las funciones booleanas y mapas de karnaugh para reducirlas
+
+\section{Preguntas}
+
+\subsection{Reduccion}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}WX/YZ & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}00 & 0 & \cellcolor{blue!25}1 & 0 & 0\\ \hline
+      \cellcolor{gray!25}01 & 0 & 0 & 0 & 0\\ \hline
+      \cellcolor{gray!25}11 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}10 & 0 & \cellcolor{blue!25}1 & 0 & 0\\ \hline
+    \end{tabular}
+  \caption{La funcion es : WX + \overline{X}\overline{Y}Z.}
+\end{table}
+
+\subsection{Problema de Tobi}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}T & \cellcolor{gray!25}X & \cellcolor{gray!25}Y & \cellcolor{gray!25}Z & \cellcolor{gray!25}F \\ \hline
+      0 & 0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 1 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion es : \overline{T}XYZ + T\overline{XY}Z + T\overline{X}Y\overline{Z} + T\overline{X}YZ + TX\overline{YZ} + TX\overline{Y}Z + TXY\overline{Z} + TXYZ.}
+\end{table}
+
+Ahora reduciendola con un mapa de karnauhg quedaria:
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}TX/YZ & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}00 & 0 & 0 & 0 & 0\\ \hline
+      \cellcolor{gray!25}01 & 0 & 0 & \cellcolor{blue!25}1 & 0\\ \hline
+      \cellcolor{gray!25}11 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}10 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion es : TX + XYZ + TZ + TY.}
+\end{table}
+
+\subsection{Equivalecia}
+
+Este circuito es equivalente a un XOR ya que tiene los mismos estados, si sus entradas son iguales pasa la señal, pero si sus entradas son diferentes entonces no pasa la señal.
+
+\subsection{Funcion booleana}
+
+Primero etiquetemos sus entradas de la forma W,X,Y,Z. Ahora como todos son AND se ve que la funcion es un producto, ahora tomando desde los primeros AND nos da la funcion: WX y YZ, ahora tomando el ultimo AND y nos queda: (WX)(YZ), que esto nos da: WXYZ
+
+\end{document}

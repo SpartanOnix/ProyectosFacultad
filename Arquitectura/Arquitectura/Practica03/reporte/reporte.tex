@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{forest}
+
+\title{Practica 03}
+\author{Dante Jusepee Sinencio Granados}
+\affil{Facultad de ciencias, UNAM}
+\date{March 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+Para esta practica se utilizaran mapas de karnaugh y tablas de verdad para reducir formulas
+
+\section{Preguntas}
+
+\subsection{Expresion 1}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}A & \cellcolor{gray!25}B & \cellcolor{gray!25}C & \cellcolor{gray!25}D & \cellcolor{gray!25}F \\ \hline
+      0 & 0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      0 & 0 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      0 & 1 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      0 & 1 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+      1 & 1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      1 & 1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+    \end{tabular}
+  \caption{La funcion es : \overline{AB}C\overline{D} + \overline{A}B\overline{CD} + \overline{A}BC\overline{D} + A\overline{BCD} + A\overline{B}C\overline{D} + AB\overline{CD} + ABC\overline{D}.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}AB/CD & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}00 & 0 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}01 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}11 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}10 & \cellcolor{blue!25}1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion reducida es : A\overline{CD} + B\overline{CD} + C\overline{D}.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c |}
+      \hline \cellcolor{gray!25}Formula & \cellcolor{gray!25}Pasos \\ \hline
+      \overline{AB}C\overline{D} + \overline{A}B\overline{CD} + \overline{A}BC\overline{D} + A\overline{BCD} + A\overline{B}C\overline{D} + AB\overline{CD} + ABC\overline{D} & Original \\ \hline
+      C\overline{D}(\overline{AB}+A\overline{B}+\overline{A}B+AB) + \overline{CD}(\overline{A}B+AB+A\overline{B}) & Distributividad \\ \hline
+      C\overline{D}(\overline{B}(\overline{A}+A)+B(\overline{A}+A)) + \overline{CD}(\overline{A}B+AB+AB+A\overline{B}) & Tercero excluido \\ \hline
+      C\overline{D}(\overline{B}+B) + \overline{CD}(B(\overline{A}+A)+A(B+\overline{B})) & Tercero excluido \\ \hline
+      C\overline{D} + \overline{CD}(B+A) & Distributividad \\ \hline
+      A\overline{CD} + B\overline{CD} + C\overline{D} & Final \\ \hline
+    \end{tabular}
+  \caption{Asi se reduciria la funcion por equivalencias logicas.}
+\end{table}
+
+\subsection{Expresion 2}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c |}
+      \hline \cellcolor{gray!25}A & \cellcolor{gray!25}B & \cellcolor{gray!25}C & \cellcolor{gray!25}F \\ \hline
+      0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      0 & 1 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion es : \overline{AB}C + \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}A/BC & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}0 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0\\ \hline
+      \cellcolor{gray!25}1 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion reducida es : AB + C.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c |}
+      \hline \cellcolor{gray!25}Formula & \cellcolor{gray!25}Pasos \\ \hline
+      \overline{AB}C + \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC & Original \\ \hline
+      \overline{A}(\overline{B}C+BC) + A(\overline{B}C+B\overline{C}+BC) & Distributividad \\ \hline
+      \overline{A}(C(\overline{B}+B)) + A(\overline{B}C+AB+B\overline{C}+BC) & Distributividad \\ \hline
+      \overline{A}C + A(C(\overline{B}+B)+B(C+\overline{C})) & Tercero excluido \\ \hline
+      \overline{A}C + A(C+B) & Tercero excluido \\ \hline
+      \overline{A}C + AC + AB & Distributividad \\ \hline
+      C(\overline{A}+A) + AB & Tercero excluido \\ \hline
+      C + AB & Final \\ \hline
+    \end{tabular}
+  \caption{Asi se reduciria la funcion por equivalencias logicas.}
+\end{table}
+
+\subsection{Expresion 3}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c |}
+      \hline \cellcolor{gray!25}A & \cellcolor{gray!25}B & \cellcolor{gray!25}C & \cellcolor{gray!25}F \\ \hline
+      0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      0 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & \cellcolor{blue!10}0\\ \hline
+    \end{tabular}
+  \caption{La funcion es : \overline{A}B\overline{C} + A\overline{BC} + A\overline{B}C + AB\overline{C}.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}A/BC & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}0 & 0 & 0 & 0 & \cellcolor{blue!25}1\\ \hline
+      \cellcolor{gray!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & 0 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion reducida es : A\overline{B} + B\overline{C}.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c |}
+      \hline \cellcolor{gray!25}Formula & \cellcolor{gray!25}Pasos \\ \hline
+      \overline{A}B\overline{C} + A\overline{BC} + A\overline{B}C + AB\overline{C} & Original \\ \hline
+      B(\overline{AC}+A\overline{C}) + \overline{B}(A\overline{C}+AC) & Distributividad \\ \hline
+      B(\overline{C}(\overline{A}+A)) + \overline{B}(A(\overline{C}+C)) & Tercero excluido \\ \hline
+      B\overline{C} + \overline{B}A & Final \\ \hline
+    \end{tabular}
+  \caption{Asi se reduciria la funcion por equivalencias logicas.}
+\end{table}
+
+\subsection{Expresion 4}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c |}
+      \hline \cellcolor{gray!25}A & \cellcolor{gray!25}B & \cellcolor{gray!25}C & \cellcolor{gray!25}F \\ \hline
+      0 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 0 & 1 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 0 & \cellcolor{blue!10}0\\ \hline
+      0 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 0 & 0 & \cellcolor{blue!10}0\\ \hline
+      1 & 0 & 1 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 0 & \cellcolor{blue!25}1\\ \hline
+      1 & 1 & 1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion es : \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c |}
+      \hline \cellcolor{gray!25}A/BC & \cellcolor{gray!25}00 & \cellcolor{gray!25}01 & \cellcolor{gray!25}11 & \cellcolor{gray!25}10 \\ \hline
+      \cellcolor{gray!25}0 & 0 & 0 & \cellcolor{blue!25}1 & 0\\ \hline
+      \cellcolor{gray!25}1 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1 & \cellcolor{blue!25}1\\ \hline
+    \end{tabular}
+  \caption{La funcion reducida es : AB + AC +BC.}
+\end{table}
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c |}
+      \hline \cellcolor{gray!25}Formula & \cellcolor{gray!25}Pasos \\ \hline
+      \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC & Original \\ \hline
+      \overline{A}BC + A\overline{B}C + AB\overline{C} + ABC + ABC + ABC & Agregar ABC \\ \hline
+      BC(\overline{A}+A) + AC(\overline{B}+B) + AB(\overline{C}+C) & Tercero excluido \\ \hline
+      BC + AC + AB & Final \\ \hline
+    \end{tabular}
+  \caption{Asi se reduciria la funcion por equivalencias logicas.}
+\end{table}
+
+\end{document}

@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[table]{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{float}
+
+\begin{document}
+\title{Practica 01}
+\author{Dante Jusepee Sinencio Granados }
+\affil{Facultad de ciencias, UNAM}
+\date{March 2020}
+\maketitle
+
+\section{Introduccion}
+Esta practica fue para ver como se pueden utilizar las compuertas logicas y el como se pueden hacer equivalencias logicas
+con estas
+
+\section{Preguntas}
+
+\subsection{Or con And y negacion}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c |}
+      \hline P & \cellcolor{blue!25}v & Q \\ \hline
+      1 & \cellcolor{blue!25}1 & 1\\ \hline
+      1 & \cellcolor{blue!25}1 & 0\\ \hline
+      0 & \cellcolor{blue!25}1 & 1\\ \hline
+      0 & \cellcolor{blue!25}0 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul es el resultado.}
+\end{table}
+
+Esto es equivalente a:
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c | c |}
+      \hline \cellcolor{blue!25}\lnot & \cellcolor{blue!10}(\lnot & P & \cellcolor{red!25}\land & \cellcolor{blue!10}\lnot & Q) \\ \hline
+      \cellcolor{blue!25}1 & \cellcolor{blue!10}0 & 1 & \cellcolor{red!25}0 & \cellcolor{blue!10}0 & 1\\ \hline
+      \cellcolor{blue!25}1 & \cellcolor{blue!10}0 & 1 & \cellcolor{red!25}0 & \cellcolor{blue!10}1 & 0\\ \hline
+      \cellcolor{blue!25}1 & \cellcolor{blue!10}1 & 0 & \cellcolor{red!25}0 & \cellcolor{blue!10}0 & 1\\ \hline
+      \cellcolor{blue!25}0 & \cellcolor{blue!10}1 & 0 & \cellcolor{red!25}1 & \cellcolor{blue!10}1 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul oscuro es el resutado.}
+\end{table}
+
+\subsection{Implicacion}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c |}
+      \hline P & \cellcolor{blue!25}\Rightarrow & Q \\ \hline
+      1 & \cellcolor{blue!25}1 & 1\\ \hline
+      1 & \cellcolor{blue!25}0 & 0\\ \hline
+      0 & \cellcolor{blue!25}1 & 1\\ \hline
+      0 & \cellcolor{blue!25}1 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul es el resultado.}
+\end{table}
+
+Esto es equivalente a:
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c |}
+      \hline (\lnot & P) & \cellcolor{blue!25}v & Q \\ \hline
+      \cellcolor{blue!10}0 & 1 & \cellcolor{blue!25}1 & \cellcolor{blue!10}1\\ \hline
+      \cellcolor{blue!10}0 & 1 & \cellcolor{blue!25}0 & \cellcolor{blue!10}0\\ \hline
+      \cellcolor{blue!10}1 & 0 & \cellcolor{blue!25}1 & \cellcolor{blue!10}1\\ \hline
+      \cellcolor{blue!10}1 & 0 & \cellcolor{blue!25}0 & \cellcolor{blue!10}0\\ \hline
+    \end{tabular}
+  \caption{La celda azul oscuro es el resultado.}
+\end{table}
+
+\subsection{Equivalencia logica}
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c |}
+      \hline P & \cellcolor{blue!25}\Leftrightarrow & Q \\ \hline
+      1 & \cellcolor{blue!25}1 & 1\\ \hline
+      1 & \cellcolor{blue!25}0 & 0\\ \hline
+      0 & \cellcolor{blue!25}0 & 1\\ \hline
+      0 & \cellcolor{blue!25}1 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul es el resultado.}
+\end{table}
+
+Esto es equivalente a:
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c | c | c |}
+      \hline (P & \cellcolor{blue!10}\Rightarrow & Q) & \cellcolor{blue!25}\land & (Q & \cellcolor{blue!10}\Rightarrow & P) \\ \hline
+      1 & \cellcolor{blue!10}1 & 1 & \cellcolor{blue!25}1 & 1 & \cellcolor{blue!10}1 & 1\\ \hline
+      1 & \cellcolor{blue!10}0 & 0 & \cellcolor{blue!25}0 & 0 & \cellcolor{blue!10}1 & 1\\ \hline
+      0 & \cellcolor{blue!10}1 & 1 & \cellcolor{blue!25}0 & 1 & \cellcolor{blue!10}0 & 0\\ \hline
+      0 & \cellcolor{blue!10}1 & 0 & \cellcolor{blue!25}1 & 0 & \cellcolor{blue!10}1 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul oscuro es el resultado.}
+\end{table}
+
+Y esto es equivalente a:
+
+\begin{table}[H]
+  \centering
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c |}
+      \hline (\lnot & P & \cellcolor{blue!10}v & Q) & \cellcolor{blue!25}\land & (\lnot & Q & \cellcolor{blue!10}v & P) \\ \hline
+      \cellcolor{red!10}0 & 1 & \cellcolor{blue!10}1 & 1 & \cellcolor{blue!25}1 & \cellcolor{red!10}0 & 1 & \cellcolor{blue!10}1 & 1\\ \hline
+      \cellcolor{red!10}0 & 1 & \cellcolor{blue!10}0 & 0 & \cellcolor{blue!25}0 & \cellcolor{red!10}1 & 0 & \cellcolor{blue!10}1 & 1\\ \hline
+      \cellcolor{red!10}1 & 0 & \cellcolor{blue!10}1 & 1 & \cellcolor{blue!25}0 & \cellcolor{red!10}0 & 1 & \cellcolor{blue!10}0 & 0\\ \hline
+      \cellcolor{red!10}1 & 0 & \cellcolor{blue!10}1 & 0 & \cellcolor{blue!25}1 & \cellcolor{red!10}1 & 0 & \cellcolor{blue!10}1 & 0\\ \hline
+    \end{tabular}
+  \caption{La celda azul oscuro es el resultado.}
+\end{table}
+
+
+
+\end{document}

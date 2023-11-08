@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel} 
+\usepackage[table]{xcolor}
+\usepackage{amssymb}
+\usepackage{authblk}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{forest}
+
+\title{Practica 03}
+\author{Dante Jusepee Sinencio Granados}
+\affil{Facultad de ciencias, UNAM}
+\date{April 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+En esta practica creamos decodificadores (y un codificador) con compuertas logicas.
+
+\section{Preguntas}
+\subsection{Decodificador 3x8}
+Para este lo primero fue crear el 2x4 y el 2x4 enable, despues lo logico es combinar 2 de 2x4 pero se obtendria un 4x8 en lugar de 3x8, ahi es donde entra el 2x4 enable, con este ya es mas facil unirlos, las 2 primeras entradas son para obtener los valores y la tercera para cambiar el valor del enable.
+
+\subsection{Problema de Toby}
+Regresaremos cuando inicio el club de toby, en esa entonces solo era toby y su mejor amigo, 2 amigos mas se quieren unir, pero para unirse, toby (tienes 2 votos por norma al crear el club) y su mejor amigo deben de votar a favor, si uno de los 2 se niega, entonces no se pueden unir, el unico inconveniente es que toby ya les habia dicho que si se podian unir (entonces uno de los votos de toby siempre estara a favor).
+\\
+Con el decodificador de 2x4 enable se puede resolver ya que el enable es una entrada que puedes tener como quieras y las otras son las que varias y con compuertas logicas se puede resolver con 2 AND uno donde los 2 votos de toby coincidan y otro donde el voto del mejor amigo y los 2 de toby coincidan.
+
+\subsection{Decodificador 4x16}
+Para este se nesecitan un decodificador de 2x4 y cuatro decodificadores de 2x4 enable, el 2x4 sirve para dar valor a las entradas enable de los 2x4 enable, 2 entradas sirven para los valores de los 2x4 enable y las otras 2 entradas para el 2x4.
+
+\section{Punto extra}
+\subsection{Decodificador 5x32}
+Esta en el archivo de logisim (esta muy grande este circuito).
+
+\subsection{Codificador 16x4}
+Esta en el archivo de logisim, Para estre lo cree en vase a codificadores 4x2 y 8x3, todo lo cree yo ya que casi no encontre ejemplos de como crear un codificador con compuertas logicas.
+
+\subsection{Series o peliculas}
+No se que servicios tengas pero lo dividire en series, peliculas, caricaturas y anime.
+\subsubsection{Series}
+- Batman 1969
+- The ofice
+- Suits
+- The boys
+- Good omen
+
+\subsubsection{Peliculas}
+- Hardcore henry\\
+- Kung fury\\
+- Train to busan\\
+- Red line (Pelicula en anime
+
+\subsubsection{Caricaturas}
+- Final space\\
+- Invader zim\\
+- Todo ben 10\\
+- Sonic boom\\
+- Teen titans go\\
+- Avatar (incluyendo la leyenda de korra)
+
+\subsubsection{Anime}
+- Konosuba\\
+- Haruhi susumiya\\
+- Bunny girl senpai\\
+- No game no life\\
+- Megalobox\\
+- Jojo's\\
+- Pokemon generation\\
+- Mob psyco 100\\
+- One punch man\\
+- Kakegurui\\
+- Terror in resonant\\
+- Goblin slayer\\
+- Angel bits
+
+
+\end{document}
