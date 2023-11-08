@@ -1,0 +1,410 @@
+Behaviour,Avoidance,Compliance ,Vessels,Group_size
+Travel,No,Yes,1,1
+Surface active,No,Yes,1,1
+Travel,No,Yes,6,2
+Travel,No,Yes,6,2
+Travel,No,Yes,6,2
+Travel,No,Yes,6,2
+Travel,No,Yes,6,2
+Travel,No,Yes,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Rest,Yes,Yes,1,1
+Travel,No,No,1,1
+Travel,No,Yes,1,1
+Travel,Yes,Yes,4,2
+Rest,Yes,No,1,1
+Travel,No,Yes,2,2
+Travel,No,Yes,2,2
+Travel,No,No,1,1
+Rest,No,No,1,2
+Travel,No,No,1,1
+Travel,No,Yes,1,1
+Rest,No,Yes,4,1
+Rest,No,Yes,4,1
+Rest,No,Yes,4,1
+Rest,No,Yes,4,1
+Travel,No,No,4,1
+Rest,No,Yes,1,1
+Surface active,No,Yes,1,1
+Travel,No,Yes,1,2
+Travel,No,Yes,6,3
+Travel,No,Yes,6,1
+Travel,No,Yes,6,1
+Travel,Yes,No,2,1
+Travel,Yes,No,2,1
+Travel,Yes,No,2,1
+Travel,Yes,No,2,1
+Surface active,No,No,2,2
+Travel,No,No,4,1
+Travel,No,No,5,1
+Travel,No,No,5,1
+Travel,No,No,5,1
+Travel,No,No,5,1
+Travel,No,No,5,1
+Rest,No,Yes,1,1
+Rest,No,Yes,2,1
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Travel,No,No,6,2
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,Yes,No,8,4
+Social,No,No,9,4
+Social,No,No,1,4
+Social,No,No,7,4
+Travel,No,Yes,2,3
+Travel,No,Yes,2,3
+Social,No,Yes,1,1
+Travel,No,Yes,1,2
+Travel,No,Yes,1,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,1,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,1,8
+Travel,No,No,1,11
+Travel,No,Yes,1,11
+Travel,No,Yes,1,11
+Surface active,No,Yes,1,11
+Surface active,No,Yes,1,2
+Surface active,No,No,3,11
+Surface active,No,No,3,11
+Surface active,No,No,3,11
+Surface active,No,No,1,2
+Surface active,No,No,1,2
+Surface active,No,No,1,2
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Surface active,No,No,1,11
+Travel,No,No,1,2
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Surface active,No,No,5,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,No,No,4,1
+Travel,No,No,4,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Surface active,No,No,3,2
+Surface active,No,No,3,2
+Surface active,No,No,3,2
+Travel,No,Yes,2,3
+Travel,No,Yes,2,3
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,1,1
+Rest,No,No,2,1
+Rest,No,No,2,1
+Rest,No,No,2,1
+Rest,No,No,2,1
+Social,No,No,1,2
+Social,No,No,1,2
+Travel,No,Yes,1,1
+Surface active,No,No,1,1
+Surface active,No,Yes,1,1
+Surface active,No,Yes,1,2
+Surface active,No,Yes,1,1
+Surface active,No,Yes,1,1
+Surface active,No,Yes,1,2
+Surface active,No,Yes,1,3
+Surface active,No,Yes,1,4
+Social,No,Yes,1,1
+Travel,No,Yes,1,3
+Rest,No,Yes,1,2
+Travel,No,No,1,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Social,No,No,2,1
+Travel,No,No,1,1
+Travel,No,No,1,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Surface active,No,Yes,1,1
+Surface active,No,No,1,1
+Travel,No,No,1,2
+Travel,No,No,1,2
+Travel,No,Yes,2,1
+Travel,No,Yes,2,1
+Travel,No,Yes,1,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,7,1
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,4,2
+Travel,No,No,2,2
+Travel,No,No,2,2
+Travel,No,No,2,2
+Travel,No,No,2,2
+Travel,No,No,1,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,No,No,5,2
+Travel,Yes,No,2,2
+Travel,Yes,No,2,2
+Travel,Yes,No,2,2
+Travel,Yes,No,2,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,No,Yes,1,2
+Travel,No,Yes,1,2
+Travel,No,Yes,1,2
+Travel,No,Yes,1,1
+Rest,No,No,1,2
+Rest,No,No,1,2
+Travel,No,No,1,2
+Travel,No,No,1,2
+Travel,No,No,1,2
+Travel,Yes,No,1,3
+Travel,No,Yes,1,3
+Social,No,No,5,2
+Social,No,No,5,2
+Social,No,No,5,2
+Social,Yes,No,5,2
+Social,Yes,No,5,2
+Social,Yes,No,5,2
+Rest,No,Yes,3,2
+Rest,No,Yes,3,2
+Rest,No,Yes,3,2
+Travel,No,Yes,1,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,5,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,8,1
+Travel,No,No,5,1
+Travel,No,No,5,1
+Travel,No,No,2,1
+Travel,No,No,2,1
+Surface active,No,No,7,2
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,No,3,1
+Travel,No,Yes,1,1
+Travel,No,No,2,1
+Travel,No,No,2,1
+Surface active,No,Yes,2,1
+Surface active,No,Yes,2,1
+Surface active,No,Yes,2,2
+Surface active,No,Yes,2,2
+Travel,No,Yes,2,2
+Travel,No,Yes,2,2
+Travel,No,Yes,4,3
+Travel,No,Yes,4,3
+Travel,No,Yes,4,3
+Travel,No,No,4,3
+Travel,No,No,1,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,2,1
+Travel,No,No,2,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,Yes,No,3,2
+Travel,Yes,No,3,2
+Travel,Yes,Yes,3,2
+Travel,No,Yes,1,3
+Travel,No,No,1,4
+Travel,Yes,No,4,3
+Travel,Yes,No,4,3
+Travel,Yes,No,4,3
+Travel,Yes,Yes,4,3
+Travel,Yes,Yes,4,3
+Travel,Yes,No,2,4
+Travel,Yes,No,2,4
+Travel,Yes,Yes,2,4
+Travel,No,Yes,2,4
+Travel,No,Yes,2,4
+Travel,No,No,1,4
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,Yes,No,4,2
+Travel,No,No,3,4
+Travel,No,No,3,4
+Travel,No,No,3,4
+Travel,No,No,3,4
+Travel,No,No,3,4
+Travel,No,No,3,4
+Travel,No,No,1,2
+Travel,No,No,1,2
+Travel,Yes,No,1,1
+Surface active,No,Yes,1,10
+Surface active,No,Yes,1,10
+Rest,No,No,1,1
+Surface active,No,Yes,1,1
+Surface active,No,Yes,1,1
+Surface active,No,Yes,1,2
+Rest,No,Yes,1,1
+Surface active,No,Yes,2,1
+Surface active,No,Yes,2,1
+Travel,No,Yes,1,1
+Travel,No,Yes,2,2
+Travel,No,Yes,2,2
+Travel,No,No,1,1
+Surface active,No,Yes,1,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,1,1
+Surface active,No,Yes,1,1
+Surface active,No,No,4,1
+Surface active,No,No,4,1
+Surface active,No,Yes,4,1
+Surface active,No,Yes,4,1
+Travel,No,Yes,1,1
+Travel,No,No,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Surface active,No,No,1,1
+Surface active,No,Yes,1,1
+Surface active,No,No,1,1
+Surface active,No,No,1,1
+Surface active,No,No,1,1
+Surface active,No,No,1,2
+Travel,No,No,1,2
+Surface active,No,No,2,1
+Surface active,No,No,2,1
+Surface active,No,No,2,1
+Surface active,No,No,2,1
+Surface active,No,No,1,2
+Surface active,No,Yes,1,1
+Travel,No,Yes,1,1
+Travel,No,No,4,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,No,Yes,4,1
+Travel,No,No,8,1
+Surface active,No,Yes,1,2
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Travel,No,Yes,3,1
+Surface active,No,No,3,2
+Surface active,No,No,3,2
+Surface active,No,No,3,2
+Surface active,No,Yes,3,2
