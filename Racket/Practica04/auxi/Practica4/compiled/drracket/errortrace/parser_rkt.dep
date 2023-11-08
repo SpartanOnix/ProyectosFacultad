@@ -1,0 +1,1 @@
+("7.8" racket ("3215d7b75bc35a5837bfcf0733eb017e471c1cfa" . "5130e48779bab51d5b494f359ace981ec23fba1b") #"C:\\Users\\jamyn\\Documents\\Programacion\\Racket\\Practica 4\\auxi\\Practica4\\./grammars.rkt" (collects #"errortrace" #"errortrace-key.rkt") (collects #"plai" #"lang" #"reader.rkt") (collects #"plai" #"main.rkt") (collects #"racket" #"runtime-config.rkt"))
