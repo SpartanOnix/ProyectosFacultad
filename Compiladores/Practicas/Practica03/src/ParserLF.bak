@@ -1,0 +1,16 @@
+#lang nanopass
+#|
+Compiladores 2022-1
+Profesora: Dra. Lourdes del Carmen Gonzalez Huesca
+Ayudante: Naomi Itzel Reyes Granados
+Laboratorio: Nora Hilda Hernández Luna
+
+Parser LF
+|#
+
+(require "Lexer.rkt" "Parser.rkt"
+   nanopass/base
+   (prefix-in : parser-tools/lex-sre)
+   (prefix-in re- parser-tools/lex-sre)
+   parser-tools/yacc
+   parser-tools/lex)

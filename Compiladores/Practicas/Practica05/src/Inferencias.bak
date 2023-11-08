@@ -1,0 +1,39 @@
+#lang nanopass
+
+#|
+Compiladores 2022-1
+Profesora: Dra. Lourdes del Carmen Gonzalez Huesca
+Ayudante: Naomi Itzel Reyes Granados
+Laboratorio: Nora Hilda Hernández Luna
+
+Inferencias
+
+Equipo:
+•	Cruz Jimenez Alejandro - 316008488 
+•	Sandoval Mendoza Antonio - 316075725 
+•	Sinencio Granados Dante Jusepee - 316246019
+|#
+
+(require nanopass/base)
+
+;; Definimos el lenguaje LF como viene en el PDF
+(define-language LF
+   (terminals
+   (variable (x))
+   (primitive (pr))
+   (constant (c))
+   (type (t)))
+   (Expr (e body)
+      x
+      pr
+      c
+      t
+      (quot c)
+      (begin e* ... e)
+      (primapp pr e* ...)
+      (if e0 e1 e2)
+      (lambda ([x* t*] ...) body)
+      (let ([x* t* e*] ...) body)
+      (letrec ([x* t* e*] ...) body)
+      (list e* e)
+      (e0 e1 ...)))

@@ -1,0 +1,7 @@
+#lang racket
+
+;; Ejercicio 1
+;; Recibe un valor en años edad e y regresa el tiempo vivido en horas, minutos y segundos
+;; imc : number -> string number
+(define (edad e)
+   (printf (* e 8760)))

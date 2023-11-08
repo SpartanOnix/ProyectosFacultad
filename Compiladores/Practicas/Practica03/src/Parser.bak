@@ -1,0 +1,286 @@
+#lang nanopass
+
+#|
+Compiladores 2022-1
+Profesora: Dra. Lourdes del Carmen Gonzalez Huesca
+Ayudante: Naomi Itzel Reyes Granados
+Laboratorio: Nora Hilda Hernández Luna
+
+Lexer y parser
+|#
+
+(require "Lexer.rkt"
+   nanopass/base
+   (prefix-in : parser-tools/lex-sre)
+   (prefix-in re- parser-tools/lex-sre)
+   parser-tools/yacc
+   parser-tools/lex)
+
+;; Una abstraccion de la gramatica minHS.
+
+; Estructura para los tipos
+(define-struct var-exp (i) #:transparent)
+(define-struct num-exp (n) #:transparent)
+(define-struct bool-exp (b) #:transparent)
+(define-struct int-exp () #:transparent) ; For the Int type.
+(define-struct boole-exp () #:transparent) ; For the Bool type.
+; Note: There is a difference: bool is for values and boole is for type
+
+; Estructura para los primitivos
+(define-struct prim-exp (op e1 e2) #:transparent) ; For the arithmetic operations.
+
+; Estructura para los: "(), {}, []"
+(define-struct par-exp (exp) #:transparent) 
+(define-struct key-exp (exp) #:transparent) 
+(define-struct brack-exp (exp) #:transparent)
+
+; Estructura para las funciones
+(define-struct fun-exp (f g) #:transparent)
+(define-struct func-exp (f g) #:transparent)
+(define-struct fun-f-exp (f g h) #:transparent)
+(define-struct app-exp (f g) #:transparent)
+(define-struct app-t-exp (f g) #:transparent)
+
+; Estrtuctura para los operadores
+(define-struct if-then-exp (g e1 e2) #:transparent) ; For the if conditionals.
+(define-struct let-exp (v e) #:transparent)
+(define-struct assign-exp (v e) #:transparent)
+(define-struct typeof-exp (v e) #:transparent) ; For the type of operator ":".
+(define-struct typeof-f-exp (f t e) #:transparent) ; For the name and the parameters of the function (f), the returning type (t) and the body (e).
+
+(define (and-exp . e)
+   (andmap (lambda (x) (equal? #t x)) e))
+
+(define (or-exp . e)
+   (andmap (lambda (x) (equal? #t x)) e))
+
+(define minHS-parser
+   (parser
+      (start exp) 
+      (end EOF) 
+      (error void) 
+      (tokens a b) 
+      (precs (left - +) (left * /))
+   (grammar 
+      (exp
+         ; Parseadores de tipos
+         ((NUM) (num-exp $1))
+         ((BOOL) (bool-exp $1))
+         ((VAR) (var-exp $1))
+         
+         ; Parseadores de primitivos
+         ((exp + exp) (make-prim-exp + $1 $3)) 
+         ((exp - exp) (make-prim-exp - $1 $3))
+         ((exp * exp) (make-prim-exp * $1 $3))
+         ((exp / exp) (make-prim-exp / $1 $3))
+
+         ; Parseador de "(), {}"
+         ((LP exp RP) (make-par-exp $2))
+         ((LK exp RK) (make-key-exp $2))
+
+         ; Parseador para las funciones
+         ((FUN LP list RP => exp) (make-fun-exp $3 $6))
+         ((FUNC exp exp) (make-func-exp $2 $3))
+         ((FUNF LP exp LP list RP TYPEOF type RP => exp) (make-fun-f-exp (make-typeof-exp $3 $5) $8 $11))
+         ((exp APP exp) (make-app-exp $1 $3))
+         ((LET LP list RP IN exp END) (make-let-exp $3 $6))
+
+         ; Parseador para los operadores
+         ((IF LP exp RP THEN LK exp RK ELSE LK exp RK) (if-then-exp $3 $7 $11))
+         ((exp TYPEOF type) (make-typeof-exp $1 $3))
+
+         ; Parseador para OR y AND
+         ((exp AND exp) (make-prim-exp and-exp $1 $3))
+         ((exp OR exp) (make-prim-exp and-exp $1 $3))
+         )
+
+      ; Parseador para varios tipos
+      (type
+         ((INT) (int-exp))
+         ((BOOLE) (boole-exp)) 
+         ((FUNC type type) (make-func-exp $2 $3))
+         ((LP type RP) (make-par-exp $2))
+      )
+
+      ; Parseador para varios operadores
+      (list
+         ((exp TYPEOF type = exp) (make-assign-exp (make-typeof-exp $1 $3) $5))
+         ((exp TYPEOF type) (make-typeof-exp $1 $3))
+         ((list TYPEOF type) (make-typeof-exp $1 $3))
+         ((list APPT list) (make-app-t-exp $1 $3))
+         ((LB list RB) (make-brack-exp $2))
+      )
+    )))
+
+;; ================================ Ejercicios de la practica 03 ================================
+(define-language LF
+  (terminals
+  (variable (x))
+  (primitive (pr))
+  (constant (c))
+  (string (s))
+  (char (c1))
+  (type (t))
+  (lista (l)))
+  (Expr (e body)
+     x
+     pr
+     c
+     s
+     c1
+     t
+     l
+     (begin e* ... e)
+     (if e0 e1)
+     (if e0 e1 e2)
+     (fun ((x* t*) ...) t body* ... body)
+     (let ((x* t* e*) ...) body* ... body)
+     (funF x ((x* t*) ...) t body* ... body)
+     (e0 e1 ...)
+     (pr e* ... e)))
+
+; A function that stores our lexer into a lambda function without arguments.
+(define (lex-this lexer input) (lambda () (lexer input)))
+
+(define (variable? x)
+   (and (symbol? x) (not (memq x '(and or + - * / > <)))))
+
+(define (type? t)
+   (or (equal? t 'Int) (equal? t 'Bool) (eq? t 'String) (eq? t 'Char)))
+
+(define (lista? x)
+   (list? x))
+
+(define (primitive? x)
+   (or (procedure? x) (memq x '(and or + - * / > <))))
+
+(define (constant? x)
+   (or (number? x) (boolean? x)))
+
+(define-parser parse-LF LF)
+
+;; ====================  E2 =======================
+(define (expr->string e)
+   match e
+   [(var-exp e) (symbol->string e)]
+   [(num-exp e) (number->string e)]
+   [(bool-exp e) (format "~ a" e)]
+   [(prim-exp op e1 e2) (cond
+      [(equal? op +) (string-append "(+ " (expr->string e1) " " (expr->string e2) ")")]
+      [(equal? op -) (string-append "(- " (expr->string e1) " " (expr->string e2) ")")]
+      [(equal? op *) (string-append "(+ " (expr->string e1) " " (expr->string e2) ")")])]
+   [(if-exp e1 e2 e3) (string-append "(if " (expr->string e1) " " (expr->string e2) " " (expr->string e3) ")")]
+   [(fun-exp vt e) (string-append "(fun " (type->string vt) " " (expr->string e) ")")]
+   [(fun-f-exp e1 e2) (string-append "(funf " (type->string e1) " " (expr->string e2) ")")]
+   [(let-exp e1 e2) (string-append "(let (" (type->string e1) ") " (expr->string e2) ")")]
+   [(par-exp e) (expr->string e)])
+
+(define (type->string e)
+  (match e
+     [(int-exp) "Int"]
+     [(boolean-exp) "Bool"]
+     [(var-exp e) (expr->string (var-exp e))]
+     [(typeof-exp) (var-exp v) (string-append "(" v " " (type->string t) ")")]
+     [(typeof-exp v t) (string-append (type->string v) " " (type-string t))]
+     [(typeof-f-exp f v t) (string-append (expr->string f) " (" (type->string v) " " (type->string t) ")")]
+     [(app-t-exp t1 t2) (string-append (type->string t1) " " (type->string t2))]
+     [(assign-exp t e) (string-append " (" (type->string t) " " (expr->string e) ")")]
+     [(brack-exp t) (type->string t)]
+     [(par-exp t) (type->string t)]))
+
+;; ====================  E3 =======================
+(define-pass naive-rename-var : LF (ir) -> LF ()
+  (Expr : Expr (ir) -> Expr ()
+     [,x (let* ([newX (newVar x)]) newX)]
+     [(fun ((,x* ,t*) ...) ,t ,[body*] ... ,[body]) (let* ([newXs (map newVar x*)])
+          )]))
+
+;; ====================  E4 =======================
+
+; For the rename-var
+
+; Tokens for the lexer
+(define-tokens a1 (NUM1 VAR1))
+(define-empty-tokens b1 (EOF))
+
+; A lexer for the variables.
+; Takes an alphanumeric string and returns a list of tokens, where each token is
+; a number or a string.
+(define var-lexer
+   (lexer
+      [(:: (:+ (char-range #\a #\z) (:+ (char-range #\A #\Z)))) (cons  `(VAR1 ,(string->symbol lexeme)) (var-lexer input-port))]
+      
+      [(:: (:: (:+ (char-range #\0 #\9)) (:* (char-range #\0 #\9)))) (cons `(NUM1 ,(string->number lexeme)) (var-lexer input-port))]
+      
+      [(eof)
+       
+      `()]))
+
+; Function that takes a list [x1,...,xn-1,xn] and
+; returns the list [x1,...,xn-1]
+(define (init l)
+   (take l (- (length l) 1)))
+
+; Function that takes a list of tokens [t1,...,tn] and if the last token is
+; a number n, returns [t1,...,n+1]; otherwise, returns [t1,...,tn,0]
+(define (newName lToks)
+   (let ([ultimo (last (last lToks))])
+      (if (number? ultimo)
+         (append (init lToks) (list (quasiquote (NUM1 (unquote (add1 ultimo))))))
+         (append lToks (list '(NUM1 0))))))
+
+; Function that takes a function that given a list of tokens,
+; flats the list of tokens into a string
+(define (constructVar lToks) ;; ["c" "h" ] -> "ch" | "hc"
+   (string-join (foldr (lambda (tok l) (cons (format "~a" (last tok)) l)) '() lToks) ""))
+  
+; Function that takes a symbol that represents a name of a variable
+; and returns a fresh name of variable as a string
+(define (newVar x)
+   (string->symbol (constructVar (newName (var-lexer (open-input-string (format "~a" x)))))))
+
+; Function that makes a naive rename over each variable that occurs in an expression generated by LF
+(define-pass naive-rename-var : LF (ir) -> LF ()
+   (Expr : Expr (ir) -> Expr ()
+      [,x (let* ([newX (newVar x)]) newX)]
+      [(fun ((,x* ,t*) ...) ,t ,[body*] ... ,[body]) (let* ([newXs (map newVar x*)])
+         `(fun ((,newXs ,t*) ...) ,t ,body* ... ,body))]
+      [(let ((,x* ,t* ,[e*]) ...) ,[body*] ... ,[body]) (let* ([newXs (map newVar x*)])
+         `(let ((,newXs ,t* ,e*) ...) ,body* ... ,body))]
+      [(funF ,x ((,x* ,t*) ...) ,t ,[body*] ... ,[body]) (let* ([newX (newVar x)] [newXs (map newVar x*)])
+         `(funF ,newX ((,newXs ,t*) ...) ,t ,body* ... ,body))]))
+
+; Function that renames each variable that occurs in an expression generated by LF so variables
+; nested occurrences of the same variable are distinguished
+(define-pass rename-var : LF (ir) -> LF ()
+   (Expr : Expr (ir) -> Expr ()
+      [,x (let* ([newX (newVar x)]) newX)]
+      [(fun ((,x* ,t*) ...) ,t ,[body*] ... ,[body]) (let* ([newXs (map newVar x*)])
+         (naive-rename-var `(fun ((,newXs ,t*) ...) ,t ,body* ... ,body)))]
+      [(let ((,x* ,t* ,[e*]) ...) ,[body*] ... ,[body]) (let* ([newXs (map newVar x*)])
+         (naive-rename-var `(let ((,newXs ,t* ,e*) ...) ,body* ... ,body)))]
+      [(funF ,x ((,x* ,t*) ...) ,t ,[body*] ... ,[body]) (let* ([newX (newVar x)] [newXs (map newVar x*)])
+         (naive-rename-var `(funF ,newX ((,newXs ,t*) ...) ,t ,body* ... ,body)))]))
+
+;; ==================== E5 =======================
+(define-language LNI
+   (extends LF)
+   (Expr (e body) (- (if e0 e1))))
+
+(define-parser parse-LNI LNI)
+
+(define-pass remove-cne-armed-if : LF (ir) -> LNI()
+   (Expr : Expr (ir) -> Expr()
+      [(if, [e0], [e1]) (if,e0,e1 (void))]))
+
+;; ==================== E6 =======================
+(define-language LNI2
+  (extends LNI)
+  (terminals (- (string (s))))
+  (Expr (e body) (- s)))
+
+(define-parser parse-LNI2 LNI2)
+
+(define-pass remove-string : LNI(ir) -> LNI2 ()
+  (Expr : Expr (ir) -> Expr()
+     [,s '(lista, (string->list , s))]))
