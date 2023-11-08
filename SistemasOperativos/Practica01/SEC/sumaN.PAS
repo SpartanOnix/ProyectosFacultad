@@ -1,0 +1,17 @@
+program sumaN;
+    var
+      i : integer;
+      num : integer;
+      res : integer;
+    begin
+      res := 0;
+      i := 0;
+      num := 5;
+
+      while i < num do
+      begin
+          res := res + num;
+          i := i + 1;
+      end;
+      write(res);
+end.
