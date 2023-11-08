@@ -1,0 +1,10 @@
+Sinencio Granados Dante Jusepee
+Sandoval Mendoza Antonio
+
+-> La funcion del mapa de karnaugh de 3 variables fue la mas dificil, tambien el de
+    2 variables estuvo muy complicado, apenas con ayuda pude hacerlo, para este tipo
+    de practicas estaria bien que fueras haciendo la practica junto a nosotros para
+    ver una tipo de resolucion a la practica ya que habia muchas formas de hacerlo
+
+-> En si lo que siento que hace falta es una explicacion mas detallada de como
+    funciona haskell  
