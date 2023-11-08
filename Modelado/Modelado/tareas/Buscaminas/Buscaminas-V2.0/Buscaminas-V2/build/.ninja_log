@@ -1,0 +1,70 @@
+# ninja log v5
+0	914	1572710625	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+0	914	1572710625	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+0	914	1572710625	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+0	914	1572710625	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+915	1871	1572710626	Bucaminas@exe/meson-generated_src_Menu_InicioJuego.c.o	c47c9a80d89b7157
+914	1872	1572710626	Bucaminas@exe/meson-generated_src_Celdas_Celdas.c.o	159127b4eb8aeb08
+915	1872	1572710626	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+915	1893	1572710626	Bucaminas@exe/meson-generated_src_Tablero_Tablero.c.o	aeaf0f995d47448e
+1893	2069	1572710626	Bucaminas	bdc6cb3fc71810fb
+2	663	1572718875	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+2	663	1572718875	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+2	663	1572718875	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+2	663	1572718875	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+663	1106	1572718881	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1106	1230	1572718881	Bucaminas	bdc6cb3fc71810fb
+4	641	1572720830	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+4	641	1572720830	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+4	641	1572720830	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+4	641	1572720830	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+641	1204	1572720838	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1204	1356	1572720838	Bucaminas	bdc6cb3fc71810fb
+0	640	1572722099	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+0	640	1572722099	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+0	640	1572722099	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+0	640	1572722099	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+640	1043	1572722104	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1043	1142	1572722104	Bucaminas	bdc6cb3fc71810fb
+5	774	1572722941	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+5	774	1572722941	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+5	774	1572722941	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+5	774	1572722941	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+775	1162	1572722959	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1162	1297	1572722959	Bucaminas	bdc6cb3fc71810fb
+0	780	1572723084	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+0	780	1572723084	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+0	780	1572723084	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+0	780	1572723084	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+781	1169	1572723090	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1169	1288	1572723090	Bucaminas	bdc6cb3fc71810fb
+2	806	1572723262	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+2	806	1572723262	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+2	806	1572723262	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+2	806	1572723262	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+807	1216	1572723267	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1216	1324	1572723267	Bucaminas	bdc6cb3fc71810fb
+5	642	1572723391	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+5	642	1572723391	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+5	642	1572723391	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+5	642	1572723391	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+642	1138	1572723396	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1138	1254	1572723396	Bucaminas	bdc6cb3fc71810fb
+4	629	1572724027	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+4	629	1572724027	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+4	629	1572724027	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+4	629	1572724027	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+629	1170	1572724047	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1170	1301	1572724047	Bucaminas	bdc6cb3fc71810fb
+1	683	1572724211	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+1	683	1572724211	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+1	683	1572724211	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+1	683	1572724211	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+683	1119	1572724235	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1120	1257	1572724236	Bucaminas	bdc6cb3fc71810fb
+2	722	1572724498	Bucaminas@exe/src/Celdas/Celdas.c	8d8a822673d67ca3
+2	722	1572724498	Bucaminas@exe/src/Tablero/Tablero.c	8d8a822673d67ca3
+2	722	1572724498	Bucaminas@exe/src/Menu/InicioJuego.c	8d8a822673d67ca3
+2	722	1572724498	Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c	8d8a822673d67ca3
+723	1163	1572725018	Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o	bee5017d1a2f7cc7
+1163	1297	1572725018	Bucaminas	bdc6cb3fc71810fb

@@ -1,0 +1,27 @@
+[
+  {
+    "directory": "/home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build",
+    "command": "valac -C --debug --pkg gtk+-3.0 --pkg glib-2.0 --color=always --directory Bucaminas@exe --basedir ../ ../src/Celdas/Celdas.vala ../src/Tablero/Tablero.vala ../src/Menu/InicioJuego.vala '../src/Juego de Partidas/JuegodePartida.vala'",
+    "file": "../src/Celdas/Celdas.vala"
+  },
+  {
+    "directory": "/home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build",
+    "command": "cc -IBucaminas@exe -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/libdrm -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -w -O0 -g -pthread  -MD -MQ 'Bucaminas@exe/meson-generated_src_Celdas_Celdas.c.o' -MF 'Bucaminas@exe/meson-generated_src_Celdas_Celdas.c.o.d' -o 'Bucaminas@exe/meson-generated_src_Celdas_Celdas.c.o' -c 'Bucaminas@exe/src/Celdas/Celdas.c'",
+    "file": "Bucaminas@exe/src/Celdas/Celdas.c"
+  },
+  {
+    "directory": "/home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build",
+    "command": "cc -IBucaminas@exe -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/libdrm -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -w -O0 -g -pthread  -MD -MQ 'Bucaminas@exe/meson-generated_src_Tablero_Tablero.c.o' -MF 'Bucaminas@exe/meson-generated_src_Tablero_Tablero.c.o.d' -o 'Bucaminas@exe/meson-generated_src_Tablero_Tablero.c.o' -c 'Bucaminas@exe/src/Tablero/Tablero.c'",
+    "file": "Bucaminas@exe/src/Tablero/Tablero.c"
+  },
+  {
+    "directory": "/home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build",
+    "command": "cc -IBucaminas@exe -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/libdrm -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -w -O0 -g -pthread  -MD -MQ 'Bucaminas@exe/meson-generated_src_Menu_InicioJuego.c.o' -MF 'Bucaminas@exe/meson-generated_src_Menu_InicioJuego.c.o.d' -o 'Bucaminas@exe/meson-generated_src_Menu_InicioJuego.c.o' -c 'Bucaminas@exe/src/Menu/InicioJuego.c'",
+    "file": "Bucaminas@exe/src/Menu/InicioJuego.c"
+  },
+  {
+    "directory": "/home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build",
+    "command": "cc -IBucaminas@exe -I. -I.. -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/libdrm -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -w -O0 -g -pthread  -MD -MQ 'Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o' -MF 'Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o.d' -o 'Bucaminas@exe/meson-generated_src_Juego de Partidas_JuegodePartida.c.o' -c 'Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c'",
+    "file": "Bucaminas@exe/src/Juego de Partidas/JuegodePartida.c"
+  }
+]

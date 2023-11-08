@@ -1,0 +1,10 @@
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\bin\Debug\Filtros.exe.config
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\bin\Debug\Filtros.exe
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\bin\Debug\Filtros.pdb
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.csprojAssemblyReference.cache
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.Properties.Resources.resources
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.csproj.GenerateResource.cache
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.csproj.CoreCompileInputs.cache
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.exe
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.pdb
+C:\Users\jamyn\Documents\Modelado\Filtros\Filtros\obj\Debug\Filtros.Intergraf.resources

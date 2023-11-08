@@ -1,0 +1,70 @@
+Build started at 2019-11-02T10:03:12.846092
+Main binary: /usr/bin/python3
+Python system: Linux
+The Meson build system
+Version: 0.47.2
+Source dir: /home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2
+Build dir: /home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build
+Build type: native build
+Project name: buscaminas-v2
+Project version: undefined
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build/meson-private/sanitycheckc.c -o /home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build/meson-private/sanitycheckc.exe
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/spartanonix/Documentos/Modelado/tareas/Buscaminas/Buscaminas-V2.0/Buscaminas-V2/build/meson-private/sanitycheckc.exe
+Native C compiler: cc (gcc 8.2.1 "cc (GCC) 8.2.1 20181215 (Red Hat 8.2.1-6)")
+Running compile:
+Working directory:  /tmp/tmp9getumm4
+Command line:  valac /tmp/tmp9getumm4/testfile.vala -C 
+
+Code:
+ class MesonSanityCheck : Object { }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Native Vala compiler: valac (valac 0.40.15)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Found pkg-config: /usr/bin/pkg-config (1.4.2)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.56.4
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib64 -lglib-2.0
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+Running compile:
+Working directory:  /tmp/tmp6plmqtw_
+Command line:  cc /tmp/tmp6plmqtw_/testfile.c -pipe -D_FILE_OFFSET_BITS=64 -c -o /tmp/tmp6plmqtw_/output.obj -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-redhat-linux/8/
+programs: =/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/bin/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/bin/
+libraries: =/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/x86_64-redhat-linux/8/:/lib/../lib64/:/usr/lib/x86_64-redhat-linux/8/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../x86_64-redhat-linux/lib/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Native dependency glib-2.0 found: YES 2.56.4
+Determining dependency 'gtk+-3.0' with pkg-config executable '/usr/bin/pkg-config'
+Called `/usr/bin/pkg-config --modversion gtk+-3.0` -> 0
+3.22.30
+Called `/usr/bin/pkg-config --cflags gtk+-3.0` -> 0
+-I/usr/include/gtk-3.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib64/glib-2.0/include -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/uuid -I/usr/include/harfbuzz -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gio-unix-2.0/ -I/usr/include/libdrm -I/usr/include/atk-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib64/dbus-1.0/include -pthread
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-L/usr/lib64 -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Native dependency gtk+-3.0 found: YES 3.22.30
+Build targets in project: 1
+Found ninja-1.8.2 at /usr/bin/ninja

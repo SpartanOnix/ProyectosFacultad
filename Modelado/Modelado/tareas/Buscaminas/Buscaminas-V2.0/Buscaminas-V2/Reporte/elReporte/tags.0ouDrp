@@ -1,0 +1,10 @@
+Introduccion	ProyectoBuscaminas.tex	/^\\maketitle$/;"	s
+Definici   n del problema	ProyectoBuscaminas.tex	/^Tambien nos ayudará a visualizar las capacidades y conocimientos que hemos adquirido a través del curso al igual que a identificar cosas que aun debemos de mejorar.$/;"	s
+An   lisis del problema	ProyectoBuscaminas.tex	/^\\end{enumerate}$/;"	s
+Selecci   n de la mejor alternativa	ProyectoBuscaminas.tex	/^\\end{enumerate}$/;"	s
+Pseudoc   digo	ProyectoBuscaminas.tex	/^El programa será desarrollado con el lenguaje vala en el entorno de desarrollo GNOME Builder.\\newline Aprovecharemos las pocas facilidades que nos da el IDE para crear nuestro programa.$/;"	s
+Pruebas y mejoras	ProyectoBuscaminas.tex	/^\\section{Pseudocódigo}$/;"	s
+An   lisis estad   stico	ProyectoBuscaminas.tex	/^\\end{enumerate}$/;"	s
+Situacion extraodinaria	ProyectoBuscaminas.tex	/^\\section{Análisis estadístico}$/;"	s
+Plan a futuro	ProyectoBuscaminas.tex	/^\\section{Situacion extraodinaria}$/;"	s
+Bibliograf   a	ProyectoBuscaminas.tex	/^\\section{Plan a futuro}$/;"	s

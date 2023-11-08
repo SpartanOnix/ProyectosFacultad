@@ -1,0 +1,85 @@
+\documentclass[15pt, letterpaper]{article}
+
+\usepackage{tabularx}
+\usepackage[utf8]{inputenc}
+\usepackage{afterpage}
+\usepackage{graphicx}
+\graphicspath{{imagenes/}}
+\usepackage[spanish]{babel}
+\usepackage[left = 2cm, top = 2cm, bottom = 2cm, right = 2cm]{geometry}
+\title{Proyecto 3: Buscaminas}
+
+\author{
+García Santamaría José Luis
+\and
+Rodríguez Campos Erick Eduardo
+\and
+Silencio Granados Dante Jusepee
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduccion}
+Este proyecto tiene como objetivo seleccionar uno de nuestros proyectos entregados anteriormente durante la carrera para reazerlo y mejorarlo con la ayuda de un lenguaje de programación que ninguno de los integrantes del equipo haya utilizado anteriormente.\newline
+
+Tambien nos ayudará a visualizar las capacidades y conocimientos que hemos adquirido a través del curso al igual que a identificar cosas que aun debemos de mejorar.
+
+\section{Definición del problema}
+El proyecto consiste en elaborar un programa que sea capaz de  simular el juego de Busca Minas, cuyas reglas son las siguientes:
+
+\begin{enumerate}
+\item Encontrar todas las casillas que no contienen una mina.
+\item Algunas casillas tienen un número que indica la cantidad. de minas que hay en las casillas circundantes (al ser descubiertas).
+\item Si se descubre una casilla con una mina, se pierde la partida.
+\item Se puede poner una marca en las casillas que el jugador piensa que hay minas para ayudar a descubrir las que están cerca.
+\end{enumerate}
+
+
+\section{Análisis del problema}
+Como ya se mencinó anteriormente, el programa intenta simular un busca minas con las siguientes características:
+
+
+\begin{enumerate}
+\item El usuario debe poder elegir de que tamaño debe ser el tablero, siendo 8x8 el mínimo.
+\item El usuario puede elegir cuántas minas hay en el tablero y se deben distribuir de manera aleatoria.
+\item El tablero debe mostrar los números que indican cuántas minas hay alrededor de cada celda si es que esta ya fue descubierta.
+\item Se debe poder marcar una casilla sin descubrirla.
+\item Si se quiere descubrir o marcar una celda, se deben pedir las coordenadas de dicha celda y validarlas, además se debe mostrar un menú preguntando que se desea hacer con dicha celda.
+\item No es necesario usar interfaz gráfica.
+\end{enumerate}
+
+
+\section{Selección de la mejor alternativa}
+Se creará un programa sin interfaz gráfica que mediante la terminal, primeramente pida al usuario el tamaño del tablero y el número de minas que este tendra.\newline
+
+Posteriormente imprima el tablero con las coordenadas de cada celda para que cuando el usuario introdusca una cordenada, el programa muestre las opciones correspondientes. Esto se repetirá hasta que el usuario "destape" una celda con una "mina" o "destape" todas las celdas que no contengan una "mina" (lo que pase primeramente). \newline
+
+El programa será desarrollado con el lenguaje vala en el entorno de desarrollo GNOME Builder.\newline Aprovecharemos las pocas facilidades que nos da el IDE para crear nuestro programa.
+
+\section{Pseudocódigo}
+
+\section{Pruebas y mejoras}
+En su momento para la entrega no nos pidieron ninguna prueba de nuestro programa, asi que en esta ocasión se realizaron las siguientes pruebas: 
+
+\begin{enumerate}
+\item Al momento de crear un tablero cuyo tamaño sea menor a ocho renglones o ocho columnas nuestro programa no lo permita y lanze una excepción.
+\item Al momento de establecer el número de minas en nuestro tablero que estas sean mas de ocho, en caso contrario lanzar una excepción.
+\item Al momento de indicar el numero de minas que tendra nuestro tablero, que este realmente contenga exactamente el numero anteriormente establecido.
+\item Al momento de marcar una celda en nuestro tablero, que esta no revele su contenido.
+\item Se establesca que el usuario gane cuando toda celda sin minas sea revelada sin antes haber revelado una mina, en caso contrario establecer que el usuario perdio el juego.
+
+\end{enumerate}
+
+\section{Análisis estadístico}
+
+\section{Situacion extraodinaria}
+
+\section{Plan a futuro}
+
+\section{Bibliografía}
+
+
+
+\end{document}
