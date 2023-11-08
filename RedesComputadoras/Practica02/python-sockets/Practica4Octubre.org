@@ -1,0 +1,45 @@
+* Implementación de una aplicación cliente/servidor de correo básico en Python
+
+| *Fecha de la Práctica* |  Lunes 4 de Octubre de 2021.|
+| *Fecha de entrega* |  Viernes 15 de Octubre de 2021|
+
+*Objetivo:* Aplicar los conceptos de sockets vistos en la clase de Laboratorio, para implementar una aplicación cliente/servidor de correo básico.
+
+* Descripción
+- Implementar un =servidor de correo básico= a través de un script en Python y mediante el uso del módulo de socket.
+- Se requiere investigar e implementar las peticiones y respuestas del protocolo SMTP definido en los documentos [[https://datatracker.ietf.org/doc/html/rfc5321][RFC]].
+- Especificar en el archivo README del proyecto la forma de uso del cliente y el servidor, así como las peticiones y respuestas que fueron incluidas en la aplicación.
+
+* Alcance del proyecto
+** Servidor
+Se requiere completar la interacción hasta el momento en que el servidor envía el correo, en este último paso, el servidor *NO enviará* el correo, solamente le indicará al usuario que éste ha sido enviado y lo guardará en un archivo en la carpeta HOME del usuario Linux, llamada ".mailbox_redes" .(=Ejemplo: /home/linux/.mailbox_redes= ). Los correos nuevos se agregarán al final del archivo.
+
+** Cliente
+
+Se requiere contar con una aplicación cliente, en la que su uso quede de la siguiente manera:
+#+BEGIN_SRC sh :results output
+app_enviacorreo usuario@example.com -s "Subject"
+#+END_SRC
+
+Al ejecutar el cliente, este programa solicitará el cuerpo del mensaje y al finalizar la aplicación se conectará con el servidor de correo implementado para realizar la entrega del correo.
+
+* Entrega del Proyecto
+
+Este proyecto se debe =realizar en equipo=, de acuerdo a las especificaciones dadas por los instructores del curso. Al finalizar el proyecto, se debe indicar el enlace al repositorio del código del proyecto a los instructores para su revisión.
+
+* Ayuda
+- Se puede hacer uso del servidor de correo exim4 disponible en los equipos con sistema operativo Linux Debian (en las versiones 10 u 11), para realizar pruebas y verificar algunas respuestas del servidor.
+- Se puede hacer uso de los comandos *netcat* y/o *telnet* para realizar pruebas de conexión.
+
+* Ejemplos de interacción
+
+- [[ https://mediatemple.net/community/products/dv/204404584/sending-or-viewing-emails-using-telnet ]]
+- [[ https://linuxconfig.org/send-an-email-using-telnet ]]
+- [[ https://www.ustrem.org/en/articles/how-to-send-mail-with-telnet-en/ ]]
+
+* Otros recursos
+
+- [[ https://www.exim.org/ ]]
+- [[ https://es.wikipedia.org/wiki/Puerto_de_red ]]
+
+

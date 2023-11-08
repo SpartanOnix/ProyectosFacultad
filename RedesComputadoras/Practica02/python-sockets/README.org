@@ -1,0 +1,8 @@
+* Implementación de cliente/servidor con sockets en Python
+
+
+Enlaces de apoyo
+
+| *Descarga e instalación de Python*   | https://www.python.org/downloads/ |
+| *Documentación del módulo de socket* | https://docs.python.org/3/library/socket.html |
+

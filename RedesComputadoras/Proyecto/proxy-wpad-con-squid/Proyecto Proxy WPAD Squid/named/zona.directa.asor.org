@@ -1,0 +1,21 @@
+
+;@ equivalente a asor.org
+; 1D equivale a 24H = 1440 min
+$TTL 3H
+@       IN SOA asor.org.        wpad.asor.org. (
+                        20215051102              ; serial
+                        86400            ; refresh
+                        1H               ; retry
+                        1W               ; expire
+                        3H )             ;minimum
+
+@       IN    NS        wpad.asor.org.
+@       IN    NS        server1.asor.org.
+@       MX    10        mail1.asor.org.
+@       IN    A         192.168.100.53
+
+wpad    IN    A         192.168.100.53
+server1 IN    A         192.168.100.53
+server1 IN    AAAA      2001:db8::254:53
+mail1   IN    A         192.168.100.53
+www     IN    A         192.168.100.53

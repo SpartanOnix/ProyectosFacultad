@@ -1,0 +1,20 @@
+
+function FindProxyForURL(url, host)
+{
+	if (
+            isInNet(host, "192.168.100.0/255", "255.255.255.0")
+	    || isInNet(host, "127.0.0.1", "255.0.0.0")
+	    || shExpMatch(host, "192.168.100.*")
+            || shExpMatch(host, "127.*" )
+            || shExpMatch(host, "localhost")
+            || shExpMatch(host, "*.wpad.asor.org")
+	    || isPlainHostName(host)
+            || dnsDomainIs(host, ".wpad.asor.org")
+            ) {
+              return "DIRECT";
+              }
+        else
+              {
+		return "PROXY wpad.asor.org:8080";
+              }
+}
