@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Practica01 Layout</title>
+    <style>
+
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        display: flex;
+        background: blue;
+        height: 100px;
+      }
+
+      h1 {
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      h3 {
+        background: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: gray;
+      }
+
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      article {
+        display: flex;
+        flex: 1 200px;
+        flex-flow: row wrap;
+        justify-content: center;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      button {
+        flex: 1;
+        margin: 5px;
+        front-size: 18px;
+        line-height: 1.5;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Walmart</h1>
+      <h3>Buscar producto</h3>
+      <div>
+        <button>Buscar</button>
+      </div>
+    </header>
+
+    <section>
+      <img src="imgwalmart.png">
+    </section>
+
+    <section>
+      <article>
+        <h2>Pagos</h2>
+      </article>
+
+      <article>
+        <h2>Envio</h2>
+      </article>
+
+      <article>
+        <h2>Ofertas</h2>
+      </article>
+    </section>
+  </body>
+</html>
