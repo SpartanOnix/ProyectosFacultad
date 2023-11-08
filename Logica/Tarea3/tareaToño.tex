@@ -1,0 +1,202 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ upgreek }
+\usepackage{ amssymb }
+
+\title{Lógica Computacional. Tarea 3}
+\author{Sandoval Mendoza Antonio }
+\date{March 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Realiza las siguientes sustituciones:}
+
+(a) $(((\forall x (\exists yP^2_2(x,z))\vee P^1_2(y)))[x:=f^1_1(z)])[y:=f^2_3(z,x)]$\\
+Aplicamos sustitucion de x a ambas formulas por separado\\
+= $(\forall x (\exists yP^2_2(x,z)[x:=f^1_1(z)]) \vee P^1_2(y)[x:=f^1_1(z)])[y:=f^2_3(z,x)]$\\
+No se pudo sustituir ninguna variable. Regla 3a de las laminas\\
+= $(((\forall x (\exists yP^2_2(x,z)) \vee P^1_2(y))))[y:=f^2_3(z,x)]$\\
+Aplicamos sustitucion de y a ambas formulas por separado\\
+= $(\forall x (\exists yP^2_2(x,z)))[y:=f^2_3(z,x)]\vee P^1_2(y)[y:=f^2_3(z,x)]$\\
+= $\forall x (\exists yP^2_2(x,z)[y:=f^2_3(z,x)])\vee P^1_2(y)[y:=f^2_3(z,x)]$\\
+No se pudo sustituir ninguna variable del lado izq. Regla 3a\\
+= $\forall x (\exists yP^2_2(x,z))\vee P^1_2(y)[y:=f^2_3(z,x)]$\\
+= $\forall x (\exists yP^2_2(x,z))\vee P^1_2(y[y:=f^2_3(z,x)])$\\
+Sustituimos y\\
+= $\forall x (\exists yP^2_2(x,z))\vee P^1_2(f^2_3(z,x))$\\
+\\
+\\
+(b) $(((\exists x(\forall z(\exists yP^3_1(x,y,z))))\Leftrightarrow P^3_2(x_1,y,z_2))[x_1:=f^3_1(x,y,z_3)])[z:=f^1_2(y)]$\\
+Alfa-Equivalencia ya que "x" y "y" aparecen del lado derecho de la sustitucion\\
+= $(((\exists a(\forall z(\exists bP^3_1(a,b,z)))) \Leftrightarrow P^3_2(x_1,b,z_2))[x_1:=f^3_1(x,y,z_3)])[z:=f^1_2(y)]$\\
+Aplicamos sustitucion de $x_1$ a ambas formulas por separado\\
+= $((\exists a(\forall z(\exists bP^3_1(a,b,z)[x_1:=f^3_1(x,y,z_3)])))\Leftrightarrow P^3_2(x_1,b,z_2)[x_1:=f^3_1(x,y,z_3)])[z:=f^1_2(y)]$\\
+Solo sustituimos por la derecha \\
+= $((\exists a(\forall z(\exists bP^3_1(a,b,z)[x_1:=f^3_1(x,y,z_3)])))\Leftrightarrow P^3_2(f^3_1(x,y,z_3),b,z_2))[z:=f^1_2(y)]$\\
+NO podemos sustituimos por la izq. Regal 3a\\
+= $(((\exists a(\forall z(\exists bP^3_1(a,b,z))))\Leftrightarrow P^3_2(f^3_1(x,y,z_3),b,z_2))[z:=f^1_2(y)]$\\
+Aplicamos sustitucion de z a ambas formulas\\
+= $((\exists a(\forall z(\exists bP^3_1(a,b,z)))))[z:=f^1_2(y)]\Leftrightarrow P^3_2(f^3_1(x,y,z_3),b,z_2)[z:=f^1_2(y)]$\\
+Aplicamos la sustitucion más interna del lado izq\\
+= $\exists a(\forall z(\exists bP^3_1(a,b,z)[z:=f^1_2(y)]))\Leftrightarrow P^3_2(f^3_1(x,y,z_3),b,z_2)[z:=f^1_2(y)]$\\
+No podemos sustituir z del lado izq porque esta ligada y lado derecho regla 3a\\
+= $\exists a(\forall z(\exists bP^3_1(a,b,z)))\Leftrightarrow P^3_2(f^3_1(x,y,z_3),b,z_2)$\\
+\\
+\\
+(c) $((\exists xP^3_1(x,y,z)) \Rightarrow P^1_1(x))[z:=f^2_1(x,y)]$\\
+Como "x" y "y" aparecen del lado derecho de la sust, usamos alfa-equiv\\
+=$((\exists aP^3_1(a,y,z)) \Rightarrow P^1_1(a))[z:=f^2_1(x,y)]$\\
+Ahora con la variable "y"\\
+=$((\exists aP^3_1(a,b,z)) \Rightarrow P^1_1(a))[z:=f^2_1(x,y)]$\\
+Aplicamos sustitucion de z a ambas formulas\\
+=$(\exists aP^3_1(a,b,z)[z:=f^2_1(x,y)]) \Rightarrow P^1_1(a)[z:=f^2_1(x,y)]$\\
+No sustituimos nada del lado derecho, regla 3a\\
+=$(\exists aP^3_1(a,b,z)[z:=f^2_1(x,y)]) \Rightarrow P^1_1(a)$\\
+No podemos sustituir z del lado izq porque esta ligada\\
+=$((\exists aP^3_1(a,b,z)) \Rightarrow P^1_1(a))$\\
+Quitamos parentesis\\
+=$\exists aP^3_1(a,b,z) \Rightarrow P^1_1(a)$\\
+\\
+\\
+(d) $(((\forall yP^3_1(x,y,z))\bigwedge (\exists zP^3_2(x,y,z))\bigwedge (\forall xP^3_3(x,y,z)))[x:=f^2_1(y,z)])[y:=f^2_2(x,z)]$\\
+Aplicamos sustitucion de x a las formulas\\
+= $((\forall yP^3_1(x,y,z)[x:=f^2_1(y,z)])\bigwedge (\exists zP^3_2(x,y,z)[x:=f^2_1(y,z)])\bigwedge (\forall xP^3_3(x,y,z)[x:=f^2_1(y,z)]))[y:=f^2_2(x,z)]$ \\
+Alfa-Equivalencia "a" por "y" y "b" por "z"\\
+= $((\forall aP^3_1(x,a,b)[x:=f^2_1(y,z)])\bigwedge (\exists bP^3_2(x,a,b)[x:=f^2_1(y,z)])\bigwedge (\forall xP^3_3(x,a,b)[x:=f^2_1(y,z)]))[y:=f^2_2(x,z)]$ \\
+No podemos sustituir x porque es variable ligada\\
+= $((\forall aP^3_1(x,a,b))\bigwedge (\exists bP^3_2(x,a,b))\bigwedge (\forall xP^3_3(x,a,b)))[y:=f^2_2(x,z)]$ \\
+Aplicamos sustitucion de y a las formulas\\
+= $((\forall aP^3_1(x,a,b)[y:=f^2_2(x,z)])\bigwedge (\exists bP^3_2(x,a,b)[y:=f^2_2(x,z)])\bigwedge (\forall xP^3_3(x,a,b)[y:=f^2_2(x,z)]))$ \\
+Alfa-Equivalencia "c" por "x"\\
+= $((\forall aP^3_1(c,a,b)[y:=f^2_2(x,z)])\bigwedge (\exists bP^3_2(c,a,b)[y:=f^2_2(x,z)])\bigwedge (\forall cP^3_3(c,a,b)[y:=f^2_2(x,z)]))$ \\
+No podemos sustituir y \\
+= $((\forall aP^3_1(c,a,b))\bigwedge (\exists bP^3_2(c,a,b))\bigwedge (\forall cP^3_3(c,a,b)))$ \\
+Quitamos parentesis\\
+= $\forall aP^3_1(c,a,b)\bigwedge \exists bP^3_2(c,a,b)\bigwedge \forall cP^3_3(c,a,b)$ \\
+
+
+\maketitle
+\section{ Encuentra un modelo para el siguiente conjunto de fórmulas: }
+\\
+$\forall x(\exists yP^2_1(y,x)),\forall x \neg P^2_2(x,c) \Rightarrow P^2_1(x,c), \neg \exists xP^2_2(c, f^1_1(x)), \neg \exists xP^2_2(x, f^1_1(x))$
+\\
+\\
+\\
+Empezamos con que todo es igual a $\Gamma$ entonces: 
+\\
+$\forall x(\exists yP^2_1(y,x)),\forall x \neg P^2_2(x,c) \Rightarrow P^2_1(x,c), \neg \exists xP^2_2(c, f^1_1(x)), \neg \exists xP^2_2(x, f^1_1(x)) = \Gamma$
+\\
+Separamos los predicados:\\ \\
+1. $\forall x(\exists yP^2_1(y,x))$\\ \\
+2. $\forall x \neg P^2_2(x,c) \Rightarrow P^2_1(x,c)$\\ \\
+3. $\neg \exists xP^2_2(c, f^1_1(x))$\\ \\
+4. $\neg \exists xP^2_2(x, f^1_1(x))$\\
+
+Y tenemos que  $I_\mathds{Z} = < \Uppsi,\Phi , \sqcap >$ en especial un universo:\\ \\
+$\Uppsi(x)=1$, $\Uppsi(y)=1$, $\Uppsi(c)=0$ 
+\\ \\ $\sqcap(P^2_1)$= \{n = m\}
+\\ $\sqcap(P^2_2)$= \{n $\geqslant$ m\}
+\\ $\sqcap(f^1_1)$= \{n tal que n = (\mid n \mid + 1)$\} (valor abs)
+\\ \\
+Entonces se cumplen las 4
+\\ \\
+1- $\forall x(\exists yP^2_1(y,x))$\\
+$\sqcap(P^2_1(0,0))$= \{0 = 0\}\\
+SI SE CUMPLE 
+\\ \\
+2- $\forall x \neg P^2_2(x,c) \Rightarrow P^2_1(x,c)$\\
+$\sqcap(\neg P^2_2(-1,0) \Rightarrow P^2_1(-1,0))$=\\
+$\{-1 $\geqslant$ 0\} \Rightarrow \{-1 = 0\}$\\
+Falso de ambos lados de la implicación por lo que da verdadero\\
+SI SE CUMPLE 
+\\ \\
+3. $\neg \exists xP^2_2(c, f^1_1(x))$\\
+$\sqcap(P^2_2(0, f^1_1(-3))$=\\
+$\sqcap(P^2_2(0, \mid -3 \mid +1))$=\\
+$\sqcap(P^2_2(0, 4))$= \{0 $\geqslant$ 4\}\\
+Vemos que no existe una x que cumpla la condición\\
+entonces SI SE CUMPLE 
+\\ 
+\\
+4. $\neg \exists xP^2_2(x, f^1_1(x))$\\
+\sqcap(P^2_2(9, f^1_1(-9))$=\\
+$\sqcap(P^2_2(9, \mid -9 \mid +1))$=\\
+$\sqcap(P^2_2(9, 10))$= \{9 $\geqslant$ 10\}\\
+Vemos que no existe una x que cumpla la condición\\
+entonces SI SE CUMPLE 
+\\ 
+\\
+Los 4 predicados son Verdaderos por lo que al dar una Interpretación que para cada formula de gama se cumple, entonces concluimos con que la interpretación es un modelo para Gama.\\
+Se cumple $\models_I \gamma$ y $\gamma \in \Gamma$
+
+\maketitle
+\section{ Demuestra los siguientes teoremas de deducción natural:
+}
+
+(a) $\forall x(\exists yP^1_1(x) \Rightarrow P^1_2(y)) \vdash_N \neg(\exists x (\forall yP^1_1(x) \bigwedge \neg P^1_2(y)));$
+\\
+\\
+1. \hspace{3mm}$\forall x(\exists yP^1_1(x) \Rightarrow P^1_2(y))$ \hspace{2.5cm} Premisa\\ \\
+2. \hspace{3mm}$\neg (\forall x(\exists yP^1_1(x) \Rightarrow P^1_2(y)))$ \hspace{2cm} por  I$\neg$ \\
+3. \hspace{3mm} $(\exists x\neg (\exists yP^1_1(x) \Rightarrow P^1_2(y)))$ \hspace{1.9cm} por equivalencia de $\neg\forall$ \\
+4. \hspace{3mm} $(\exists x(\forall y \neg (P^1_1(x) \Rightarrow P^1_2(y))))$ \hspace{1.6cm} por equivalencia de $\neg\forall$ \\
+5. \hspace{3mm} $\exists x(\forall y $P^1_1(x) \bigwedge \neg P^1_2(y))$  \hspace{2.3 cm} por $\neg (p\Rightarrow q) \equiv p \bigwedge \neg q$ \\
+\\
+6. \hspace{3mm} $\neg (\exists x(\forall y $P^1_1(x) \bigwedge \neg P^1_2(y)))$  \hspace{1.8 cm} por I$\neg$ \\
+\\
+\\
+\\
+(b) $\forall x\forall yP^1_1(x) \Rightarrow P^1_2(x)\bigwedge P^1_3(y),P^1_1(c)  \vdash_N \neg \forall z \neg P^1_2(z)$
+\\
+\\
+1. \hspace{3mm} $\forall x\forall yP^1_1(x) \Rightarrow P^1_2(x)\bigwedge P^1_3(y)$ \hspace{1.5cm} Premisa\\
+2. \hspace{3mm} $P^1_1(c)$ \hspace{5.1cm} Premisa\\ \\
+3. \hspace{3mm} $P^1_1(c) \Rightarrow P^1_2(c)\bigwedge P^1_3(v)$ \hspace{2.4cm} por E $\forall x,y$\\
+4. \hspace{3mm} $P^1_2(c)\bigwedge P^1_3(v)$ \hspace{3.8cm} por E $\Rightarrow$ 3,2\\
+5. \hspace{3mm} $P^1_2(c)$ \hspace{5.1cm} por E $\bigwedge$\\
+6. \hspace{3mm} $P^1_3(v)$ \hspace{5.1cm} por E $\bigwedge$\\
+\\
+7. \hspace{3mm} $\neg(\forall z \neg P^1_2(z)) \equiv \exists z P^1_2(z)$\\
+8.\hspace{3mm} $\exists z P^1_2(z)$ \hspace{4.8cm} por I$\exists$5 por equivalencia de $\neg\forall$\\
+\\
+\\
+(c)$\neg(\exists x(P^1_1(x) \bigwedge (\forall y \neg P^2_1(x,y)))) \vdash_N \forall x(P^1_1(x) \Rightarrow (\exists y P^2_1(x, y)))$
+\\
+\\
+1. \hspace{3mm} $\neg(\exists x(P^1_1(x) \bigwedge (\forall y \neg P^2_1(x,y))))$ \hspace{1.5cm} Premisa
+\\ 
+2. \hspace{3mm} $\forall x\neg (P^1_1(x) \bigwedge (\forall y \neg P^2_1(x,y)))$ \hspace{1.8cm} por equivalencia de $\neg\forall$\\ \\
+3. \hspace{3mm} $\forall x\neg P^1_1(x) \vee \neg (\forall y \neg P^2_1(x,y))$ \hspace{1.8cm} distributividad de la negación\\
+4. \hspace{3mm} $\forall x\neg P^1_1(x) \vee \exists y \neg(\neg P^2_1(x,y))$ \hspace{1.8cm} por equivalencia de $\neg\forall$ \\ \\
+5. \hspace{3mm} $\forall x\neg P^1_1(x) \vee \exists y P^2_1(x,y)$ \hspace{2.5cm} eliminamos doble negación \\
+6. \hspace{3mm} $\forall x(P^1_1(x) \Rightarrow (\exists y P^2_1(x,y)))$ \hspace{2cm} por p \Rightarrow q \equiv \neg p\vee q \\
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
